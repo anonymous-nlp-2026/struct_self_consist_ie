@@ -1,0 +1,8 @@
+model_name_or_path: ./models/Qwen3-4B/Qwen/Qwen3-4B
+adapter_name_or_path: ./checkpoints/qwen3-4b-scierc-lora/checkpoint-400
+template: qwen3
+finetuning_type: lora
+export_dir: ./checkpoints/qwen3-4b-scierc-merged
+export_size: 2
+export_device: cpu
+export_legacy_format: false
