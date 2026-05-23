@@ -1,0 +1,14 @@
+torch
+transformers
+peft
+vllm
+datasets
+evaluate
+seqeval
+numpy
+pandas
+scipy
+scikit-learn
+matplotlib
+openai
+llamafactory
