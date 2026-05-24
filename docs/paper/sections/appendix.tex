@@ -230,13 +230,13 @@ VC's high full-set $\rho{=}0.724$ is entirely attributable to the zero/non-zero 
 \paragraph{Cross-configuration selection analysis.}
 Table~\ref{tab:cross_selection} extends the selection analysis to five additional configurations.
 On LLaMA SciERC, where output diversity remains substantial (18\% identical outputs, 39\% unique), LP achieves the highest selection F1 (0.652) at $N{=}8$ but still falls within bootstrap noise of single-sample (0.646), replicating the gap observed on Qwen SciERC (Table~\ref{tab:selection}).
-On LLaMA FewNERD ($n{=}32{,}565$, 3-seed mean), LP is the only signal with positive selection ($+0.36$~pp), consistent with LP being the most stable positive signal across model families (Qwen FewNERD: $+1.39$~pp, Table~\ref{tab:fewnerd}). All structural signals degrade selection (VC $-2.39$~pp, SJ $-0.52$~pp), consistent with the Qwen pattern. LLaMA FewNERD degeneracy ($23.4{\pm}4.7$\%, 3 seeds) is higher than Qwen ($13.0$\%), illustrating the capability-diversity tension: LLaMA achieves stronger greedy F1 ($0.784$ vs.\ $0.748$, $+3.6$~pp) but at the cost of higher degeneracy ($+10.4$~pp) and reduced oracle headroom ($10.0$ vs.\ $12.4$~pp).
+On LLaMA Few-NERD ($n{=}32{,}565$, 3-seed mean), LP is the only signal with positive selection ($+0.36$~pp), consistent with LP being the most stable positive signal across model families (Qwen Few-NERD: $+1.39$~pp, Table~\ref{tab:fewnerd}). All structural signals degrade selection (VC $-2.39$~pp, SJ $-0.52$~pp), consistent with the Qwen pattern. LLaMA Few-NERD degeneracy ($23.4{\pm}4.7$\%, 3 seeds) is higher than Qwen ($13.0$\%), illustrating the capability-diversity tension: LLaMA achieves stronger greedy F1 ($0.784$ vs.\ $0.748$, $+3.6$~pp) but at the cost of higher degeneracy ($+10.4$~pp) and reduced oracle headroom ($10.0$ vs.\ $12.4$~pp).
 On CoNLL, 48--87\% of instances produce identical outputs across all $N$ samples; this reflects a ceiling effect (single-sample F1 ${\approx}$0.91--0.92) rather than signal failure, and selection analysis on these configurations is uninformative because there is little per-sample variance for any signal to exploit.
 
 \begin{table*}[t]
 \centering
 \small
-\caption{Best-of-$N$ selection F1 (macro, instance-averaged) across configurations ($T{=}1.0$, 3-seed mean). Best non-oracle signal per row in \textbf{bold}. LP is the only signal with positive selection on both FewNERD configurations (Qwen $+1.39$~pp, Table~\ref{tab:fewnerd}; LLaMA $+0.36$~pp). At $N{=}16$ on LLaMA CoNLL, VC achieves small but significant gains ($+0.28$~pp, $p{<}0.03$; see text below). CoNLL shows especially tight clustering where greedy already exceeds 0.90.}
+\caption{Best-of-$N$ selection F1 (macro, instance-averaged) across configurations ($T{=}1.0$, 3-seed mean). Best non-oracle signal per row in \textbf{bold}. LP is the only signal with positive selection on both Few-NERD configurations (Qwen $+1.39$~pp, Table~\ref{tab:fewnerd}; LLaMA $+0.36$~pp). At $N{=}16$ on LLaMA CoNLL, VC achieves small but significant gains ($+0.28$~pp, $p{<}0.03$; see text below). CoNLL shows especially tight clustering where greedy already exceeds 0.90.}
 \label{tab:cross_selection}
 \begin{tabular}{llccccccc}
 \toprule
@@ -245,7 +245,7 @@ Config & $n$ & Greedy & Oracle & SJ & FK & EM & LP & VC \\
 LLaMA/SciERC $N{=}8$ & 529 & .646 & .778 & .643 & .639 & .634 & \textbf{.652} & .633 \\
 LLaMA/SciERC $N{=}16$ & 529 & .645 & .806 & \textbf{.649} & \textbf{.649} & .640 & .646 & .640 \\
 \addlinespace
-LLaMA/FewNERD $N{=}8$ & 32{,}565 & .784 & .884 & .779 & .779 & .774 & \textbf{.788} & .760 \\
+LLaMA/Few-NERD $N{=}8$ & 32{,}565 & .784 & .884 & .779 & .779 & .774 & \textbf{.788} & .760 \\
 \addlinespace
 Qwen/CoNLL $N{=}8$ & 2{,}756 & .908 & .948 & \textbf{.899} & .893 & .898 & .897 & .895 \\
 LLaMA/CoNLL $N{=}8$ & 2{,}756 & .924 & .943 & .924 & \textbf{.925} & .924 & .924 & .923 \\
@@ -547,7 +547,7 @@ The learned feature--correctness mapping is dataset-specific: entity agreement p
 Entity-level probes confirm that quality information is partially encoded in hidden representations (AUROC${=}0.63$\textendash$0.88$, dataset-dependent; \S\ref{sec:mechanistic}); we test whether this translates to sample-level selection gain by training probes on the generating model's hidden states.
 
 \paragraph{Setup.}
-Unlike the entity-level probe in \S\ref{sec:mechanistic} (which classifies individual entities on FewNERD/CoNLL/SciERC), this sample-level analysis uses all 551 SciERC instances (including 22 with empty gold annotations) to predict per-sample F1.
+Unlike the entity-level probe in \S\ref{sec:mechanistic} (which classifies individual entities on Few-NERD/CoNLL/SciERC), this sample-level analysis uses all 551 SciERC instances (including 22 with empty gold annotations) to predict per-sample F1.
 For each of $N{=}8$ samples per instance, we extract the mean-pooled final-layer hidden state ($d{=}4096$) from the generating Qwen3-8B model and train a linear probe and a two-layer MLP (hidden dim${=}256$) to predict per-sample F1 (5-fold CV, 3 seeds).
 Entity-level probes use dataset-specific generation temperatures ($T{=}0.5$ for Few-NERD, $T{=}0.8$ for CoNLL, $T{=}1.0$ for SciERC).
 
@@ -693,7 +693,7 @@ Dataset & ESJ AUROC & ESJ $\rho$ & Agree.\ AUROC & Agree.\ $\rho$ \\
 \midrule
 SciERC  & 0.512 & 0.020 & 0.792 & 0.515 \\
 CoNLL   & 0.553 & 0.087 & 0.941 & 0.777 \\
-FewNERD & 0.495 & $-$0.008 & 0.881 & 0.673 \\
+Few-NERD & 0.495 & $-$0.008 & 0.881 & 0.673 \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -761,7 +761,7 @@ Framework & LLaMA Factory \\
 \midrule
 \multicolumn{2}{l}{\textit{Dataset-specific}} \\
 SciERC split & 1861 / 275 / 551 \\
-CoNLL / WNUT & +\,load\_best\_model\_at\_end, \\
+CoNLL / WNUT-17 & +\,load\_best\_model\_at\_end, \\
 & eval\_steps${=}$200, save\_limit${=}$5 \\
 \bottomrule
 \end{tabular}
@@ -1555,7 +1555,7 @@ Oracle & $+$20.00 & [$+$17.98, $+$22.10] & ${<}$0.001 & --- \\
 
 \paragraph{Oracle ceiling scaling law.}
 Oracle F1 follows $F_1(N) = a - b \cdot N^{-c}$, with $R^2 > 0.999$ across all model--dataset fits (Figure~\ref{fig:oracle_scaling}).
-The exponent $c$ varies with dataset complexity: FewNERD ($c{\approx}0.61$) scales comparably to reasoning-task estimates ($c{\approx}0.5$--$0.7$; \citealp{brown2024monkeys}), while SciERC converges more slowly ($c{\approx}0.35$), consistent with complex IE producing less marginal diversity per additional sample.
+The exponent $c$ varies with dataset complexity: Few-NERD ($c{\approx}0.61$) scales comparably to reasoning-task estimates ($c{\approx}0.5$--$0.7$; \citealp{brown2024monkeys}), while SciERC converges more slowly ($c{\approx}0.35$), consistent with complex IE producing less marginal diversity per additional sample.
 CoNLL's narrow headroom ($b{=}0.04$--$0.10$) makes $c$ unreliable (inter-model variance $2.5{\times}$); we report only $a$ and $b$ for CoNLL.
 A single stochastic sample ($N{=}1$, $T{=}1.0$) underperforms greedy by 1--3\,pp because sampling noise outweighs diversity; $N{\geq}4$ is needed to match greedy.
 
@@ -1581,10 +1581,10 @@ Setting & \multicolumn{2}{c}{Degenerate} & \multicolumn{2}{c}{Non-degenerate} & 
 \midrule
 SciERC FT & 485 & 0.8 & 2{,}160 & 9.6 & 0.078 & ${<}10^{-6}$ \\
 CoNLL FT & 8{,}256 & 0.3 & 5{,}524 & 4.1 & 0.060 & ${<}10^{-6}$ \\
-FewNERD FT & 22{,}298 & 1.9 & 75{,}397 & 8.4 & 0.213 & ${<}10^{-6}$ \\
+Few-NERD FT & 22{,}298 & 1.9 & 75{,}397 & 8.4 & 0.213 & ${<}10^{-6}$ \\
 SciERC PT & 81 & 3.7 & 2{,}564 & 9.9 & 0.350 & 0.083 \\
 CoNLL PT & 5{,}284 & 0.3 & 8{,}496 & 7.9 & 0.033 & ${<}10^{-6}$ \\
-FewNERD PT & 18{,}007 & 1.4 & 47{,}123 & 16.8 & 0.071 & ${<}10^{-6}$ \\
+Few-NERD PT & 18{,}007 & 1.4 & 47{,}123 & 16.8 & 0.071 & ${<}10^{-6}$ \\
 \midrule
 \textbf{All} & \textbf{54{,}411} & \textbf{1.3} & \textbf{141{,}264} & \textbf{11.1} & \textbf{0.109} & $\mathbf{{<}10^{-300}}$ \\
 \bottomrule
@@ -1596,7 +1596,7 @@ FewNERD PT & 18{,}007 & 1.4 & 47{,}123 & 16.8 & 0.071 & ${<}10^{-6}$ \\
 \begin{table}[t]
 \centering
 \small
-\caption{Cross-scale and cross-family comparison ($N{=}8$, $T{=}1.0$). Hdr.\ = oracle $-$ greedy (pp). Degen.: instance degeneracy (\%). $^\star$Qwen2.5; unmarked: Qwen3. $^\dagger$Not computed. $^\ddagger$200-instance subset; 10.1\% parse failures excluded.}
+\caption{Cross-scale and cross-family comparison ($N{=}8$, $T{=}1.0$). Hdr.\ = oracle $-$ greedy (pp). Degen.: instance degeneracy (\%). F1 values are entity-type-averaged macro-F1, which differs from the instance-averaged F1 in Table~\ref{tab:fewnerd}. $^\star$Qwen2.5; unmarked: Qwen3. $^\dagger$Not computed. $^\ddagger$200-instance subset; 10.1\% parse failures excluded.}
 \label{tab:scale_comparison}
 \resizebox{\columnwidth}{!}{%
 \begin{tabular}{@{}llccccccc@{}}
@@ -2376,8 +2376,8 @@ SciERC  & FS & 16.6 & .060  & .293 & .301 & .258 & .461 & $-$0.08 & .544 \\
 CoNLL   & ZS & 67.7 & $-$.002 & .304 & .302 & .297 & .712 & $-$0.37 & --- \\
 CoNLL   & FS & 70.0 & .106  & .442 & .451 & .426 & .745 & +0.03 & .417 \\
 \midrule
-FewNERD & ZS & 46.2 & .119  & .345 & .321 & .416 & .628 & $-$0.20 & --- \\
-FewNERD & FS & 45.2 & .161  & .345 & .327 & .410 & .619 & +0.02 & .401 \\
+Few-NERD & ZS & 46.2 & .119  & .345 & .321 & .416 & .628 & $-$0.20 & --- \\
+Few-NERD & FS & 45.2 & .161  & .345 & .327 & .410 & .619 & +0.02 & .401 \\
 \bottomrule
 \end{tabular}%
 }
