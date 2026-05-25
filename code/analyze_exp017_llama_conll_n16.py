@@ -6,14 +6,14 @@ import numpy as np
 from scipy.stats import spearmanr, kendalltau, rankdata
 from collections import Counter
 
-sys.path.insert(0, './code')
+sys.path.insert(0, '/root/autodl-tmp/struct_self_consist_ie/code')
 from consistency import compute_all_consistency_scores, _ner_soft_jaccard_pair
 from evaluation import per_instance_f1
 
-N16_PATH = "./output/exp_017_llama_conll_n16/samples.jsonl"
-N8_PATH = "./output/exp_017_llama_conll_infer/samples.jsonl"
-N8_REPORT = "./output/exp_017_llama_conll_infer/all_signals_report.json"
-OUTPUT_DIR = "./output/exp_017_llama_conll_n16"
+N16_PATH = "/root/autodl-tmp/struct_self_consist_ie/output/exp_017_llama_conll_n16/samples.jsonl"
+N8_PATH = "/root/autodl-tmp/struct_self_consist_ie/output/exp_017_llama_conll_infer/samples.jsonl"
+N8_REPORT = "/root/autodl-tmp/struct_self_consist_ie/output/exp_017_llama_conll_infer/all_signals_report.json"
+OUTPUT_DIR = "/root/autodl-tmp/struct_self_consist_ie/output/exp_017_llama_conll_n16"
 SUBTASK = "ner"
 
 

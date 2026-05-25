@@ -12,12 +12,12 @@ import sys
 import numpy as np
 from scipy.stats import spearmanr
 
-sys.path.insert(0, './code')
+sys.path.insert(0, '/root/autodl-tmp/struct_self_consist_ie/code')
 from evaluation import per_instance_f1
 
-EXP001_PATH = "./output/exp001_n16_seed42_200only_backup/samples.jsonl"
-EXP012_PATH = "./output/exp_012_logprob/samples_with_logprobs.jsonl"
-OUTPUT_PATH = "./output/logprob_diagnosis/diagnosis.json"
+EXP001_PATH = "/root/autodl-tmp/struct_self_consist_ie/output/exp001_n16_seed42_200only_backup/samples.jsonl"
+EXP012_PATH = "/root/autodl-tmp/struct_self_consist_ie/output/exp_012_logprob/samples_with_logprobs.jsonl"
+OUTPUT_PATH = "/root/autodl-tmp/struct_self_consist_ie/output/logprob_diagnosis/diagnosis.json"
 
 
 def load_jsonl(path):

@@ -3,7 +3,7 @@ import numpy as np
 from collections import Counter
 from scipy import stats
 
-DATA_PATH = './output/exp_012_rerun_1024/samples.jsonl'
+DATA_PATH = '/root/autodl-tmp/struct_self_consist_ie/output/exp_012_rerun_1024/samples.jsonl'
 
 def entity_set(ent_list):
     return set((e['text'], e['type'], e['start'], e['end']) for e in ent_list)

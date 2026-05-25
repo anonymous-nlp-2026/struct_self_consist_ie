@@ -1,8 +1,8 @@
 #!/bin/bash
 set -e
 
-source activate
-cd .
+source /root/miniconda3/bin/activate
+cd /root/autodl-tmp/struct_self_consist_ie
 
 echo "============================================"
 echo "  exp_029a Post-Processing Pipeline"

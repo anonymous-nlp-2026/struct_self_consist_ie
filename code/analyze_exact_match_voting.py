@@ -12,11 +12,11 @@ from collections import Counter
 import numpy as np
 from scipy.stats import spearmanr, kendalltau
 
-sys.path.insert(0, './code')
+sys.path.insert(0, '/root/autodl-tmp/struct_self_consist_ie/code')
 from consistency import compute_all_consistency_scores
 from evaluation import per_instance_f1
 
-DATA_PATH = "./output/mvp_pilot_004/samples.jsonl"
+DATA_PATH = "/root/autodl-tmp/struct_self_consist_ie/output/mvp_pilot_004/samples.jsonl"
 
 
 def load_data(path):
@@ -149,7 +149,7 @@ def main():
         print_table(subtask, analysis)
         report[subtask] = analysis
 
-    out_path = "./output/mvp_pilot_004/exp013_exact_match_report.json"
+    out_path = "/root/autodl-tmp/struct_self_consist_ie/output/mvp_pilot_004/exp013_exact_match_report.json"
     with open(out_path, "w") as f:
         json.dump(report, f, indent=2)
     print(f"\nReport saved to {out_path}")

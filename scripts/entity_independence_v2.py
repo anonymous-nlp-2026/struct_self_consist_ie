@@ -236,9 +236,9 @@ def main():
     print()
     
     datasets = {
-        "FewNERD": "./output/exp_021_fewnerd_n8_seed123/samples.jsonl",
-        "CoNLL2003": "./output/exp_002_conll_n8_seed123/samples.jsonl",
-        "SciERC": "./output/exp_018_qwen_scierc_seed123/samples.jsonl",
+        "FewNERD": "/root/autodl-tmp/struct_self_consist_ie/output/exp_021_fewnerd_n8_seed123/samples.jsonl",
+        "CoNLL2003": "/root/autodl-tmp/struct_self_consist_ie/output/exp_002_conll_n8_seed123/samples.jsonl",
+        "SciERC": "/root/autodl-tmp/struct_self_consist_ie/output/exp_018_qwen_scierc_seed123/samples.jsonl",
     }
     
     results = {"mc_null_baseline": mc}
@@ -275,7 +275,7 @@ def main():
         print(f"  Ratio percentiles: {r['ratio_percentiles']}")
         print()
     
-    out_dir = "./output/entity_independence_analysis"
+    out_dir = "/root/autodl-tmp/struct_self_consist_ie/output/entity_independence_analysis"
     os.makedirs(out_dir, exist_ok=True)
     with open(f"{out_dir}/entity_independence_v2.json", "w") as f:
         json.dump(results, f, indent=2)

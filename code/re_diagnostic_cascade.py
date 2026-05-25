@@ -13,7 +13,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from evaluation import relation_strict_match
 
-BASE = Path(".")
+BASE = Path("/root/autodl-tmp/struct_self_consist_ie")
 DATA_PATH = BASE / "output" / "exp_012_rerun_1024" / "samples_with_logprobs.jsonl"
 OUT_PATH = BASE / "output" / "re_diagnostic_cascade_results.json"
 

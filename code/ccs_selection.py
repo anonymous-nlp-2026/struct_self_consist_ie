@@ -12,10 +12,10 @@ import os
 import numpy as np
 from collections import Counter
 import sys
-sys.path.insert(0, "./code")
+sys.path.insert(0, "/root/autodl-tmp/struct_self_consist_ie/code")
 from unified_metrics import compute_entity_f1, compute_degeneracy
 
-BASE = "."
+BASE = "/root/autodl-tmp/struct_self_consist_ie"
 
 DATASETS = [
     (f"{BASE}/output/exp_012_rerun_1024/samples.jsonl", "SciERC", 8),

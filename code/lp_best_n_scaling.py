@@ -1,7 +1,7 @@
 """Compute LP-best F1 vs Greedy F1 for N-scaling analysis (micro-average)."""
 import json, os, sys
 
-DATA_ROOT = "./output"
+DATA_ROOT = "/root/autodl-tmp/struct_self_consist_ie/output"
 CONFIGS = [
     ("SciERC", 8, "scierc_mf4v2_seed42", 42),
     ("SciERC", 16, "exp_001_seed42_v2", 42),

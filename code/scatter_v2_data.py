@@ -3,10 +3,10 @@
 import json
 import sys
 import os
-sys.path.insert(0, "./code")
+sys.path.insert(0, "/root/autodl-tmp/struct_self_consist_ie/code")
 from unified_metrics import compute_entity_f1, compute_degeneracy
 
-BASE = "./output"
+BASE = "/root/autodl-tmp/struct_self_consist_ie/output"
 
 EXPERIMENTS = [
     # Cross-dataset canonical (Qwen3-8B, T=1.0, seed=42)

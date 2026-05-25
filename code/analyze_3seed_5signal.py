@@ -5,14 +5,14 @@ import numpy as np
 from scipy.stats import spearmanr, rankdata
 from collections import Counter
 
-sys.path.insert(0, './code')
+sys.path.insert(0, '/root/autodl-tmp/struct_self_consist_ie/code')
 from consistency import compute_all_consistency_scores
 from evaluation import per_instance_f1
 
 SEEDS = {
-    "seed42": "./output/exp_001_seed42_v2/samples.jsonl",
-    "seed123": "./output/exp_001_seed123_v2/samples.jsonl",
-    "seed456": "./output/exp_001_seed456_v2_ner/samples.jsonl",
+    "seed42": "/root/autodl-tmp/struct_self_consist_ie/output/exp_001_seed42_v2/samples.jsonl",
+    "seed123": "/root/autodl-tmp/struct_self_consist_ie/output/exp_001_seed123_v2/samples.jsonl",
+    "seed456": "/root/autodl-tmp/struct_self_consist_ie/output/exp_001_seed456_v2_ner/samples.jsonl",
 }
 SUBTASK = "ner"
 

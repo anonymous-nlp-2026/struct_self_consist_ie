@@ -5,7 +5,7 @@ import numpy as np
 from collections import Counter
 from scipy.stats import spearmanr
 
-sys.path.insert(0, './code')
+sys.path.insert(0, '/root/autodl-tmp/struct_self_consist_ie/code')
 from evaluation import per_instance_f1
 
 def get_dominant_type(gold_entities):
@@ -23,7 +23,7 @@ def compute_key_sets(samples):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--input_dir", default="./output/exp_021_inference/")
+    parser.add_argument("--input_dir", default="/root/autodl-tmp/struct_self_consist_ie/output/exp_021_inference/")
     parser.add_argument("--output_csv", default=None)
     args = parser.parse_args()
 

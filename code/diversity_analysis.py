@@ -5,12 +5,12 @@ import numpy as np
 from itertools import combinations
 from collections import Counter
 
-sys.path.insert(0, './code')
+sys.path.insert(0, '/root/autodl-tmp/struct_self_consist_ie/code')
 from consistency import _ner_soft_jaccard_pair
 from evaluation import per_instance_f1
 
 N = 8
-OUTPUT_DIR = './output'
+OUTPUT_DIR = '/root/autodl-tmp/struct_self_consist_ie/output'
 
 CONFIGS = {
     'qwen_scierc_ner': f'{OUTPUT_DIR}/exp_012_rerun_1024/samples.jsonl',

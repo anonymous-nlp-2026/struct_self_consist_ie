@@ -27,8 +27,8 @@ plt.rcParams.update({
 COLORS = {'sj': '#56B4E9', 'voting': '#E69F00', 'logprob': '#0072B2'}
 MARKERS = {'sj': 'o', 'voting': 's', 'logprob': '^'}
 
-DATA_PATH = "./output/exp_012_rerun_1024/reliability_data_1024.json"
-FIG_DIR = Path('./artifacts/figures')
+DATA_PATH = "/root/autodl-tmp/struct_self_consist_ie/output/exp_012_rerun_1024/reliability_data_1024.json"
+FIG_DIR = Path('/root/autodl-tmp/struct_self_consist_ie/artifacts/figures')
 FIG_DIR.mkdir(parents=True, exist_ok=True)
 
 data = json.load(open(DATA_PATH))

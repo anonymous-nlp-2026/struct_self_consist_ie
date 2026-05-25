@@ -327,7 +327,7 @@ def main():
         print(f"  Oracle F1:          {cross_results['oracle_f1']:.4f}")
         result_out[f"{args.dataset}_to_{cross_name}"] = cross_results
 
-    out_path = args.save_path.replace(".pt", "_results.json") if args.save_path else f"./output/deberta_verifier_{args.dataset}_results.json"
+    out_path = args.save_path.replace(".pt", "_results.json") if args.save_path else f"/root/autodl-tmp/struct_self_consist_ie/output/deberta_verifier_{args.dataset}_results.json"
     with open(out_path, "w") as f:
         json.dump(result_out, f, indent=2)
     print(f"\nResults saved to {out_path}")

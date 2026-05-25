@@ -7,9 +7,9 @@ from collections import defaultdict
 THRESHOLDS = [0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5, 0.55, 0.6, 0.7, 0.8, 0.9]
 
 DATASETS = {
-    "fewnerd_5epoch": "./output/fewnerd_5epoch_lp_seed42/samples.jsonl",
-    "fewnerd_3epoch_mf4v2": "./output/fewnerd_mf4v2_seed42/samples.jsonl",
-    "fewnerd_3epoch_exp021": "./output/exp_021_inference/samples.jsonl",
+    "fewnerd_5epoch": "/root/autodl-tmp/struct_self_consist_ie/output/fewnerd_5epoch_lp_seed42/samples.jsonl",
+    "fewnerd_3epoch_mf4v2": "/root/autodl-tmp/struct_self_consist_ie/output/fewnerd_mf4v2_seed42/samples.jsonl",
+    "fewnerd_3epoch_exp021": "/root/autodl-tmp/struct_self_consist_ie/output/exp_021_inference/samples.jsonl",
 }
 
 def load_data(path):

@@ -1,8 +1,0 @@
-model_name_or_path: ./models/Qwen/Qwen3-8B
-adapter_name_or_path: ./checkpoints/ft_fewnerd_smoke
-template: qwen3
-finetuning_type: lora
-export_dir: ./checkpoints/ft_fewnerd_smoke_merged
-export_size: 5
-export_device: cpu
-export_legacy_format: false

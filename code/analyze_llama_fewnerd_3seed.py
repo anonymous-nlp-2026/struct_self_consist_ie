@@ -5,14 +5,14 @@ import numpy as np
 from collections import Counter
 from scipy.stats import spearmanr
 
-sys.path.insert(0, './code')
+sys.path.insert(0, '/root/autodl-tmp/struct_self_consist_ie/code')
 from unified_metrics import (
     load_and_filter, compute_sample_f1s, compute_greedy_f1,
     compute_degeneracy, compute_entity_f1, bootstrap_ci, bootstrap_delta_ci,
 )
 from consistency import _ner_soft_jaccard_pair, _extract_surface_keys
 
-BASE = "."
+BASE = "/root/autodl-tmp/struct_self_consist_ie"
 SEEDS = [42, 123, 456]
 SEED_DIRS = {s: f"{BASE}/output/llama_fewnerd_s{s}" for s in SEEDS}
 OUTPUT_DIR = f"{BASE}/output/llama_fewnerd_3seed_summary"

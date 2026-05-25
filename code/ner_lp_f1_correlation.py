@@ -89,7 +89,7 @@ if __name__ == "__main__":
         name = sys.argv[2]
         analyze(path, name)
     else:
-        base = "./output"
+        base = "/root/autodl-tmp/struct_self_consist_ie/output"
         datasets = [
             (f"{base}/scierc_mf4v2_seed42/samples.jsonl", "SciERC"),
             (f"{base}/conll_mf4v2_seed42/samples.jsonl", "CoNLL"),

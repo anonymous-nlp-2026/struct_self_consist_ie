@@ -8,7 +8,7 @@ Four-part analysis:
   Part 4: Best-of-N selection F1 comparison
 
 Usage:
-    cd .
+    cd /root/autodl-tmp/struct_self_consist_ie
     pip install scikit-learn  # if not installed
     python code/analyze_exp016_ensemble.py \
         --pilot_dir output/mvp_pilot_004 \
@@ -633,9 +633,9 @@ def part4_best_of_n_selection(
 
 def main():
     parser = argparse.ArgumentParser(description="exp-016: Signal ensemble analysis")
-    parser.add_argument("--pilot_dir", default="./output/mvp_pilot_004")
-    parser.add_argument("--logprob_dir", default="./output/exp_012_logprob")
-    parser.add_argument("--output_dir", default="./output/exp016_signal_ensemble")
+    parser.add_argument("--pilot_dir", default="/root/autodl-tmp/struct_self_consist_ie/output/mvp_pilot_004")
+    parser.add_argument("--logprob_dir", default="/root/autodl-tmp/struct_self_consist_ie/output/exp_012_logprob")
+    parser.add_argument("--output_dir", default="/root/autodl-tmp/struct_self_consist_ie/output/exp016_signal_ensemble")
     args = parser.parse_args()
 
     os.makedirs(args.output_dir, exist_ok=True)

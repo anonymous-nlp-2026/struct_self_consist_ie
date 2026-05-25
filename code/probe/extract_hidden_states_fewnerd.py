@@ -13,9 +13,9 @@ import time
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
-MODEL_PATH = "./checkpoints/qwen3-8b-fewnerd-exp021-merged"
-DATA_PATH = "./output/exp_021_inference/samples.jsonl"
-OUTPUT_DIR = "./output/hidden_state_probe_fewnerd"
+MODEL_PATH = "/root/autodl-tmp/struct_self_consist_ie/checkpoints/qwen3-8b-fewnerd-exp021-merged"
+DATA_PATH = "/root/autodl-tmp/struct_self_consist_ie/output/exp_021_inference/samples.jsonl"
+OUTPUT_DIR = "/root/autodl-tmp/struct_self_consist_ie/output/hidden_state_probe_fewnerd"
 
 FEWNERD_SCHEMA_HINT = (
     "Entity types: person, organization, location, building, art, product, event, other"

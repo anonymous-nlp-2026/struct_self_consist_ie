@@ -1,10 +1,10 @@
 #!/bin/bash
 set -e
 
-source conda.sh
+source /root/miniconda3/etc/profile.d/conda.sh
 conda activate base
 
-BASE=.
+BASE=/root/autodl-tmp/struct_self_consist_ie
 OUT=$BASE/output/exp_cross_model_consistency
 SCRIPT=$BASE/code/cross_model_construction.py
 

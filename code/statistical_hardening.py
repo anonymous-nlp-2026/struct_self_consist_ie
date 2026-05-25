@@ -10,11 +10,11 @@ from collections import defaultdict
 import numpy as np
 from scipy.stats import spearmanr, kruskal
 
-sys.path.insert(0, './code')
+sys.path.insert(0, '/root/autodl-tmp/struct_self_consist_ie/code')
 from evaluation import entity_strict_match, per_instance_f1, _prf
 from consistency import _ner_soft_jaccard_pair, _extract_surface_keys
 
-BASE = "."
+BASE = "/root/autodl-tmp/struct_self_consist_ie"
 OUT_DIR = f"{BASE}/output/statistical_hardening"
 os.makedirs(OUT_DIR, exist_ok=True)
 

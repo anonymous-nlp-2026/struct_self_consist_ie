@@ -82,7 +82,7 @@ def compute_seed(path, label):
     return {"greedy": g_f1, "mv": m_f1, "lp": l_f1, "degen": degen, "n": n_gold_nonempty}
 
 if __name__ == "__main__":
-    base = "./output"
+    base = "/root/autodl-tmp/struct_self_consist_ie/output"
     seeds = {}
     for label, path in [
         ("Seed 42",  os.path.join(base, "fewnerd_mf4_seed42/samples.jsonl")),

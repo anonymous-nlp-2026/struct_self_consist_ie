@@ -14,15 +14,15 @@ from collections import Counter
 import numpy as np
 from scipy.stats import spearmanr, kendalltau
 
-sys.path.insert(0, './code')
+sys.path.insert(0, '/root/autodl-tmp/struct_self_consist_ie/code')
 from consistency import (
     compute_all_consistency_scores,
     structural_consistency_soft_jaccard,
 )
 from evaluation import per_instance_f1
 
-BASE_DIR = "./output"
-OUTPUT_DIR = "./output/exp_015_v2"
+BASE_DIR = "/root/autodl-tmp/struct_self_consist_ie/output"
+OUTPUT_DIR = "/root/autodl-tmp/struct_self_consist_ie/output/exp_015_v2"
 
 DATASETS = {
     "scierc_n8_logprob": {

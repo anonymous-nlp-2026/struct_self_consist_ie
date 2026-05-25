@@ -5,7 +5,7 @@ import json, os, math, random
 import numpy as np
 from collections import Counter, defaultdict
 
-BASE = "."
+BASE = "/root/autodl-tmp/struct_self_consist_ie"
 OUT = f"{BASE}/artifacts/j_calibration"
 os.makedirs(OUT, exist_ok=True)
 

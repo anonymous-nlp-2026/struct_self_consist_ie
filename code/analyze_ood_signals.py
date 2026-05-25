@@ -7,7 +7,7 @@ from collections import Counter
 from scipy.stats import spearmanr
 from sklearn.metrics import roc_auc_score
 
-sys.path.insert(0, './code')
+sys.path.insert(0, '/root/autodl-tmp/struct_self_consist_ie/code')
 from consistency import structural_consistency_soft_jaccard, fleiss_kappa_surface
 from evaluation import per_instance_f1
 

@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 """Run bootstrap CI for LLaMA_CoNLL only, merge into existing results."""
 import json, os, sys, time
-sys.path.insert(0, ".")
+sys.path.insert(0, "/root/autodl-tmp/struct_self_consist_ie")
 from run_bootstrap_loo import (
     load_instances, filter_gold_nonempty, compute_all_signals,
     bootstrap_delta_rho
 )
 
-BASE = "."
+BASE = "/root/autodl-tmp/struct_self_consist_ie"
 
 def main():
     ds = {

@@ -13,15 +13,15 @@ from collections import Counter
 import numpy as np
 from scipy.stats import spearmanr, kendalltau
 
-sys.path.insert(0, './code')
+sys.path.insert(0, '/root/autodl-tmp/struct_self_consist_ie/code')
 from consistency import (
     compute_all_consistency_scores,
     structural_consistency_soft_jaccard,
 )
 from evaluation import per_instance_f1
 
-DATA_PATH = "./output/exp_012_logprob/samples_with_logprobs.jsonl"
-OUTPUT_DIR = "./output/exp_015_unified"
+DATA_PATH = "/root/autodl-tmp/struct_self_consist_ie/output/exp_012_logprob/samples_with_logprobs.jsonl"
+OUTPUT_DIR = "/root/autodl-tmp/struct_self_consist_ie/output/exp_015_unified"
 
 
 def load_data(path):

@@ -10,14 +10,14 @@ from collections import Counter
 import numpy as np
 from scipy.stats import binomtest
 
-sys.path.insert(0, './code')
+sys.path.insert(0, '/root/autodl-tmp/struct_self_consist_ie/code')
 from consistency import (
     _ner_soft_jaccard_pair,
     _extract_surface_keys,
 )
 from evaluation import per_instance_f1
 
-BASE = "."
+BASE = "/root/autodl-tmp/struct_self_consist_ie"
 SEEDS = {
     42: f"{BASE}/output/exp_012_rerun_1024/samples.jsonl",
     123: f"{BASE}/output/exp_018_qwen_scierc_seed123/samples.jsonl",

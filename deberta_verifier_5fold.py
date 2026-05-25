@@ -11,7 +11,7 @@ import time
 os.environ["HF_HUB_OFFLINE"] = "1"
 os.environ["TRANSFORMERS_OFFLINE"] = "1"
 
-PROJECT_DIR = "."
+PROJECT_DIR = "/root/autodl-tmp/struct_self_consist_ie"
 DATA_PATH = os.path.join(PROJECT_DIR, "output/exp_012_rerun_1024/samples.jsonl")
 OUTPUT_DIR = os.path.join(PROJECT_DIR, "output/deberta_verifier_5fold")
 CHECKPOINT_DIR = os.path.join(OUTPUT_DIR, "checkpoints")

@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
-cd .
-source activate
+cd /root/autodl-tmp/struct_self_consist_ie
+source /root/miniconda3/bin/activate
 
 export CUDA_VISIBLE_DEVICES=0
 

@@ -38,7 +38,7 @@ def convert_file(input_path, output_path):
     print(f"Converted {len(results)} instances: {input_path} -> {output_path}")
 
 if __name__ == "__main__":
-    data_dir = "./data"
+    data_dir = "/root/autodl-tmp/struct_self_consist_ie/data"
     for split in ["train", "dev"]:
         convert_file(
             os.path.join(data_dir, f"{split}.jsonl"),

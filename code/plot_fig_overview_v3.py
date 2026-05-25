@@ -232,7 +232,7 @@ for (x1, x2, c) in [
         (x1, 0.52), (x2, 0.52), arrowstyle='->', mutation_scale=8,
         color=c, lw=0.8, transform=fig.transFigure, figure=fig, zorder=19))
 
-outdir = './output/figures'
+outdir = '/root/autodl-tmp/struct_self_consist_ie/output/figures'
 os.makedirs(outdir, exist_ok=True)
 fig.savefig(os.path.join(outdir, 'fig_overview.pdf'), bbox_inches='tight', dpi=600)
 fig.savefig(os.path.join(outdir, 'fig_overview.png'), bbox_inches='tight', dpi=300)

@@ -5,9 +5,9 @@ from collections import defaultdict
 THETA = 0.25
 
 DATASETS = {
-    "fewnerd_5epoch": "./output/fewnerd_5epoch_lp_seed42/samples.jsonl",
-    "fewnerd_3epoch_mf4v2": "./output/fewnerd_mf4v2_seed42/samples.jsonl",
-    "fewnerd_3epoch_exp021": "./output/exp_021_inference/samples.jsonl",
+    "fewnerd_5epoch": "/root/autodl-tmp/struct_self_consist_ie/output/fewnerd_5epoch_lp_seed42/samples.jsonl",
+    "fewnerd_3epoch_mf4v2": "/root/autodl-tmp/struct_self_consist_ie/output/fewnerd_mf4v2_seed42/samples.jsonl",
+    "fewnerd_3epoch_exp021": "/root/autodl-tmp/struct_self_consist_ie/output/exp_021_inference/samples.jsonl",
 }
 
 def load_data(path):

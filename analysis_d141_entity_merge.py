@@ -13,15 +13,15 @@ import numpy as np
 from collections import Counter
 from pathlib import Path
 
-sys.path.insert(0, './code')
+sys.path.insert(0, '/root/autodl-tmp/struct_self_consist_ie/code')
 from evaluation import entity_strict_match
 
 DATASETS = {
-    "SciERC": "./output/exp_012_rerun_1024/samples.jsonl",
-    "CoNLL": "./output/exp_002_conll_n16_r1024/samples.jsonl",
-    "FewNERD": "./output/exp_027_fewnerd_n16/samples.jsonl",
+    "SciERC": "/root/autodl-tmp/struct_self_consist_ie/output/exp_012_rerun_1024/samples.jsonl",
+    "CoNLL": "/root/autodl-tmp/struct_self_consist_ie/output/exp_002_conll_n16_r1024/samples.jsonl",
+    "FewNERD": "/root/autodl-tmp/struct_self_consist_ie/output/exp_027_fewnerd_n16/samples.jsonl",
 }
-OUT_DIR = "./output/d141_entity_merge"
+OUT_DIR = "/root/autodl-tmp/struct_self_consist_ie/output/d141_entity_merge"
 
 
 def load_data(path):

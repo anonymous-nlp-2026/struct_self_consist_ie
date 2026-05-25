@@ -2,7 +2,7 @@ import json, os
 import numpy as np
 from scipy.stats import spearmanr
 
-BASE = "."
+BASE = "/root/autodl-tmp/struct_self_consist_ie"
 OUT_DIR = f"{BASE}/output/r21_q1_alignment"
 os.makedirs(OUT_DIR, exist_ok=True)
 

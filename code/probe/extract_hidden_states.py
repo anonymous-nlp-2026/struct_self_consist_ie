@@ -20,9 +20,9 @@ import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
 # Paths
-MODEL_PATH = "./checkpoints/qwen3-8b-scierc-merged-v2"
-DATA_PATH = "./output/exp_012_logprob/samples_with_logprobs.jsonl"
-OUTPUT_DIR = "./output/hidden_state_probe"
+MODEL_PATH = "/root/autodl-tmp/struct_self_consist_ie/checkpoints/qwen3-8b-scierc-merged-v2"
+DATA_PATH = "/root/autodl-tmp/struct_self_consist_ie/output/exp_012_logprob/samples_with_logprobs.jsonl"
+OUTPUT_DIR = "/root/autodl-tmp/struct_self_consist_ie/output/hidden_state_probe"
 
 SCIERC_SCHEMA_HINT = (
     "Entity types: Generic, Material, Method, Metric, OtherScientificTerm, Task\n"

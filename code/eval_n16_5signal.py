@@ -5,18 +5,18 @@ import numpy as np
 from scipy.stats import spearmanr, rankdata
 from collections import Counter
 
-sys.path.insert(0, './code')
+sys.path.insert(0, '/root/autodl-tmp/struct_self_consist_ie/code')
 from consistency import compute_all_consistency_scores
 from evaluation import per_instance_f1
 
 EXPERIMENTS = {
     "exp_002_conll_n16": {
-        "path": "./output/exp_002_conll_n16/samples.jsonl",
+        "path": "/root/autodl-tmp/struct_self_consist_ie/output/exp_002_conll_n16/samples.jsonl",
         "subtask": "ner",
         "dataset": "conll2003",
     },
     "exp_007_llama_n16": {
-        "path": "./output/exp_007_llama_n16/samples.jsonl",
+        "path": "/root/autodl-tmp/struct_self_consist_ie/output/exp_007_llama_n16/samples.jsonl",
         "subtask": "ner",
         "dataset": "scierc",
     },
@@ -139,7 +139,7 @@ for exp_id, cfg in EXPERIMENTS.items():
     all_results[exp_id] = analyze(cfg["path"], cfg["subtask"])
     all_results[exp_id]["dataset"] = cfg["dataset"]
 
-out_path = "./output/n16_5signal_results.json"
+out_path = "/root/autodl-tmp/struct_self_consist_ie/output/n16_5signal_results.json"
 with open(out_path, "w") as f:
     json.dump(all_results, f, indent=2, default=lambda o: float(o) if isinstance(o, (np.floating,)) else str(o))
 print(f"\nSaved to {out_path}")

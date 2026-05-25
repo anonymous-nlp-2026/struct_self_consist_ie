@@ -22,7 +22,7 @@ from sklearn.preprocessing import StandardScaler
 
 warnings.filterwarnings("ignore")
 
-DATA_DIR = "./output/hidden_state_probe_fewnerd"
+DATA_DIR = "/root/autodl-tmp/struct_self_consist_ie/output/hidden_state_probe_fewnerd"
 SAMPLES_PATH = os.path.join(DATA_DIR, "subsampled_instances.jsonl")
 
 CV_FOLDS = 5

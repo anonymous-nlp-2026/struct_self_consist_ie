@@ -13,18 +13,18 @@ import numpy as np
 from collections import Counter, defaultdict
 from scipy.stats import spearmanr
 
-sys.path.insert(0, './code')
+sys.path.insert(0, '/root/autodl-tmp/struct_self_consist_ie/code')
 from consistency import (
     structural_consistency_soft_jaccard,
     fleiss_kappa_surface,
 )
 
 SEEDS = {
-    "seed42": "./output/scierc_mf4v2_seed42/samples.jsonl",
-    "seed123": "./output/scierc_mf4v2_seed123/samples.jsonl",
-    "seed456": "./output/scierc_mf4v2_seed456/samples.jsonl",
+    "seed42": "/root/autodl-tmp/struct_self_consist_ie/output/scierc_mf4v2_seed42/samples.jsonl",
+    "seed123": "/root/autodl-tmp/struct_self_consist_ie/output/scierc_mf4v2_seed123/samples.jsonl",
+    "seed456": "/root/autodl-tmp/struct_self_consist_ie/output/scierc_mf4v2_seed456/samples.jsonl",
 }
-OUTPUT_PATH = "./scierc_3seed_recompute_results.txt"
+OUTPUT_PATH = "/root/autodl-tmp/struct_self_consist_ie/scierc_3seed_recompute_results.txt"
 
 # ==========================================================================
 # Entity matching: exact 4-tuple (text, type, start, end)

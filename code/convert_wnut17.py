@@ -11,8 +11,8 @@ import os
 import sys
 from collections import Counter
 
-RAW_DIR = "./models/wnut17_raw"
-DATA_DIR = "./data/wnut17"
+RAW_DIR = "/root/autodl-tmp/.hf_cache/wnut17_raw"
+DATA_DIR = "/root/autodl-tmp/struct_self_consist_ie/data/wnut17"
 
 VALID_TYPES = {"corporation", "creative-work", "group", "location", "person", "product"}
 

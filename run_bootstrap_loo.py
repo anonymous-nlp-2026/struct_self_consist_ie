@@ -11,7 +11,7 @@ from scipy.stats import spearmanr
 from itertools import combinations
 from collections import Counter
 
-BASE = "."
+BASE = "/root/autodl-tmp/struct_self_consist_ie"
 
 # =========================================================================
 # Signal computation (self-contained)

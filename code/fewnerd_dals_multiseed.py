@@ -5,7 +5,7 @@ import json
 import numpy as np
 import os
 
-BASE = "."
+BASE = "/root/autodl-tmp/struct_self_consist_ie"
 SAMPLES_PATH = os.path.join(BASE, "output/exp_027_fewnerd_n16/samples.jsonl")
 OUTPUT_PATH = os.path.join(BASE, "output/fewnerd_dals_multiseed_results.json")
 

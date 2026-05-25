@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
-source activate
-cd .
+source /root/miniconda3/bin/activate
+cd /root/autodl-tmp/struct_self_consist_ie
 
 export CUDA_VISIBLE_DEVICES=0
 
@@ -11,7 +11,7 @@ from peft import PeftModel
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import torch, os
 
-base_path = './models/Qwen/Qwen3-8B'
+base_path = '/root/autodl-tmp/.hf_cache/Qwen/Qwen3-8B'
 adapter_path = 'output/exp_021_fewnerd_full'
 merged_path = 'checkpoints/qwen3-8b-fewnerd-exp021-merged'
 

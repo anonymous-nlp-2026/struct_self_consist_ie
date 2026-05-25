@@ -1,4 +1,4 @@
-#!python.12
+#!/root/miniconda3/bin/python3.12
 """Diagnostic-Calibrated Deployment Framework evaluation.
 
 Computes 3 diagnostic indicators + LP selection delta for each dataset-model
@@ -16,10 +16,10 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
-sys.path.insert(0, "./code")
+sys.path.insert(0, "/root/autodl-tmp/struct_self_consist_ie/code")
 from unified_metrics import compute_entity_f1, compute_degeneracy
 
-BASE = "./output"
+BASE = "/root/autodl-tmp/struct_self_consist_ie/output"
 OUT_DIR = os.path.join(BASE, "diagnostic_calibration")
 os.makedirs(OUT_DIR, exist_ok=True)
 

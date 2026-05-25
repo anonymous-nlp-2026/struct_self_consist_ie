@@ -6,7 +6,7 @@ import sys
 import numpy as np
 from scipy.stats import spearmanr
 
-sys.path.insert(0, './code')
+sys.path.insert(0, '/root/autodl-tmp/struct_self_consist_ie/code')
 from evaluation import per_instance_f1, entity_strict_match, compute_ner_f1
 
 SUBTASK = "ner"
@@ -84,7 +84,7 @@ def analyze(name, data):
     print(f"    pooled (all samples):    {rho_pooled:.4f}")
 
 if __name__ == "__main__":
-    base = "."
+    base = "/root/autodl-tmp/struct_self_consist_ie"
     
     datasets = [
         ("SciERC exp_012_rerun_1024", f"{base}/output/exp_012_rerun_1024/samples.jsonl"),

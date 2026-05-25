@@ -9,7 +9,7 @@ import sys
 import numpy as np
 from collections import defaultdict
 
-BASE = "."
+BASE = "/root/autodl-tmp/struct_self_consist_ie"
 sys.stdout = open(sys.stdout.fileno(), mode='w', buffering=1)
 
 SEED_PATHS = {

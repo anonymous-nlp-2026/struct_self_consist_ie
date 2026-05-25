@@ -9,12 +9,12 @@ from collections import Counter
 import numpy as np
 from scipy.stats import spearmanr, kendalltau, rankdata
 
-sys.path.insert(0, './code')
+sys.path.insert(0, '/root/autodl-tmp/struct_self_consist_ie/code')
 from consistency import compute_all_consistency_scores, structural_consistency_soft_jaccard
 from evaluation import per_instance_f1
 
-DATA_PATH = "./output/exp_017_llama_conll_infer/samples.jsonl"
-OUTPUT_PATH = "./output/exp_017_llama_conll_infer/all_signals_report.json"
+DATA_PATH = "/root/autodl-tmp/struct_self_consist_ie/output/exp_017_llama_conll_infer/samples.jsonl"
+OUTPUT_PATH = "/root/autodl-tmp/struct_self_consist_ie/output/exp_017_llama_conll_infer/all_signals_report.json"
 SUBTASK = "ner"
 
 

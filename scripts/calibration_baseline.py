@@ -16,7 +16,7 @@ from sklearn.preprocessing import StandardScaler
 from scipy.optimize import minimize_scalar
 from scipy.special import expit
 
-WORK_DIR = Path(".")
+WORK_DIR = Path("/root/autodl-tmp/struct_self_consist_ie")
 OUTPUT_DIR = WORK_DIR / "output"
 
 DATASETS = {

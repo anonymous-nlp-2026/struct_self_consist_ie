@@ -5,11 +5,11 @@ import numpy as np
 from scipy.stats import spearmanr, rankdata
 from collections import Counter
 
-sys.path.insert(0, './code')
+sys.path.insert(0, '/root/autodl-tmp/struct_self_consist_ie/code')
 from consistency import compute_all_consistency_scores
 from evaluation import per_instance_f1
 
-DATA_PATH = "./output/exp_012_rerun_1024/samples.jsonl"
+DATA_PATH = "/root/autodl-tmp/struct_self_consist_ie/output/exp_012_rerun_1024/samples.jsonl"
 
 def load_data(path):
     with open(path) as f:
@@ -112,7 +112,7 @@ for subtask in ["ner", "re"]:
         for sig in ["sj", "fk", "em", "voting_conf", "logprob"]:
             print(f"    {sig}: {sr[f'auroc_{sig}']}")
 
-out_path = "./output/exp_012_rerun_1024/auroc_5signal.json"
+out_path = "/root/autodl-tmp/struct_self_consist_ie/output/exp_012_rerun_1024/auroc_5signal.json"
 with open(out_path, "w") as f:
     json.dump(all_results, f, indent=2)
 print(f"\nSaved to {out_path}")

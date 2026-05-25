@@ -3,7 +3,7 @@
 BASE="output/exp_021_inference"
 MERGED="${BASE}/sampled_results.jsonl"
 
-cd .
+cd /root/autodl-tmp/struct_self_consist_ie
 
 echo "Merging shards..."
 cat ${BASE}/shard_0/sampled_results.jsonl \

@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
-cd .
-source activate
+cd /root/autodl-tmp/struct_self_consist_ie
+source /root/miniconda3/bin/activate
 export CUDA_VISIBLE_DEVICES=3
 
 echo "=== Step 1: Merge LoRA adapter ==="
@@ -10,7 +10,7 @@ import torch
 from peft import PeftModel
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
-base = './models/Qwen/Qwen3-8B'
+base = '/root/autodl-tmp/.hf_cache/Qwen/Qwen3-8B'
 adapter = 'checkpoints/qwen3-8b-conll2003-lora/checkpoint-400'
 out = 'checkpoints/qwen3-8b-conll2003-merged'
 

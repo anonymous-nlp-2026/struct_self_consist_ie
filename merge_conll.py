@@ -2,7 +2,7 @@ from peft import PeftModel
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import torch, os
 
-base_path = './models/Qwen/Qwen3-8B'
+base_path = '/root/autodl-tmp/.hf_cache/Qwen/Qwen3-8B'
 lora_path = 'checkpoints/qwen3-8b-conll2003-lora/checkpoint-400'
 out_path = 'checkpoints/qwen3-8b-conll2003-merged'
 

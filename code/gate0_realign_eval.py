@@ -1,13 +1,13 @@
 """Gate 0 re-evaluation with span realignment post-processing."""
 import sys
-sys.path.insert(0, './code')
+sys.path.insert(0, '/root/autodl-tmp/struct_self_consist_ie/code')
 
 import json
 from sampling import realign_spans
 from evaluation import compute_ner_f1, compute_re_f1
 
-PREDS_PATH = "./output/gate0_all_predictions.jsonl"
-OUTPUT_PATH = "./output/gate0_realigned_results.json"
+PREDS_PATH = "/root/autodl-tmp/struct_self_consist_ie/output/gate0_all_predictions.jsonl"
+OUTPUT_PATH = "/root/autodl-tmp/struct_self_consist_ie/output/gate0_realigned_results.json"
 
 # Load existing predictions
 all_data = []
@@ -121,7 +121,7 @@ with open(OUTPUT_PATH, "w") as f:
 print(f"\nResults saved to {OUTPUT_PATH}", flush=True)
 
 # Save realigned predictions
-with open("./output/gate0_realigned_predictions.jsonl", "w") as f:
+with open("/root/autodl-tmp/struct_self_consist_ie/output/gate0_realigned_predictions.jsonl", "w") as f:
     for d, rpred in zip(all_data, realigned_preds):
         f.write(json.dumps({
             "id": d.get("id", ""),

@@ -22,12 +22,12 @@ from sklearn.model_selection import KFold
 # ---------------------------------------------------------------------------
 
 DATASETS = {
-    "scierc": "./output/exp_001_seed42_v2/samples.jsonl",
-    "conll": "./output/exp_002_conll_n16/samples.jsonl",
-    "fewnerd": "./output/exp_027_fewnerd_n16/samples.jsonl",
+    "scierc": "/root/autodl-tmp/struct_self_consist_ie/output/exp_001_seed42_v2/samples.jsonl",
+    "conll": "/root/autodl-tmp/struct_self_consist_ie/output/exp_002_conll_n16/samples.jsonl",
+    "fewnerd": "/root/autodl-tmp/struct_self_consist_ie/output/exp_027_fewnerd_n16/samples.jsonl",
 }
 
-OUTPUT_DIR = "./output/entity_construction_fair"
+OUTPUT_DIR = "/root/autodl-tmp/struct_self_consist_ie/output/entity_construction_fair"
 THRESHOLDS = [0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5, 0.55, 0.6, 0.7, 0.8, 0.9]
 
 # ---------------------------------------------------------------------------

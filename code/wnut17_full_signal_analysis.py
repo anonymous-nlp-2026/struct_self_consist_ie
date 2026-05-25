@@ -9,7 +9,7 @@ from collections import Counter
 from itertools import combinations
 from scipy.stats import spearmanr
 
-sys.path.insert(0, './code/')
+sys.path.insert(0, '/root/autodl-tmp/struct_self_consist_ie/code/')
 from consistency import (
     fleiss_kappa_surface,
     structural_consistency_soft_jaccard,
@@ -19,8 +19,8 @@ from evaluation import per_instance_f1
 # ---------------------------------------------------------------------------
 # Load data
 # ---------------------------------------------------------------------------
-DATA_PATH = "./output/exp003_wnut17_eval/samples.jsonl"
-OUTPUT_DIR = "./output/review_round2"
+DATA_PATH = "/root/autodl-tmp/struct_self_consist_ie/output/exp003_wnut17_eval/samples.jsonl"
+OUTPUT_DIR = "/root/autodl-tmp/struct_self_consist_ie/output/review_round2"
 
 instances = []
 with open(DATA_PATH) as f:

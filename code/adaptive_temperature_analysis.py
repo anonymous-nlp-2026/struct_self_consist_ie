@@ -14,7 +14,7 @@ from typing import Any
 
 import numpy as np
 
-sys.path.insert(0, './code')
+sys.path.insert(0, '/root/autodl-tmp/struct_self_consist_ie/code')
 from unified_metrics import compute_entity_f1, compute_degeneracy
 
 
@@ -260,7 +260,7 @@ def analyze_dataset(t10_path: str, t12_path: str, dataset_name: str,
 
 
 def main():
-    base = "./output"
+    base = "/root/autodl-tmp/struct_self_consist_ie/output"
 
     datasets = {
         "scierc": {

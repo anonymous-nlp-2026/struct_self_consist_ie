@@ -2,7 +2,7 @@ import json
 import numpy as np
 from scipy.stats import binomtest
 
-with open('./output/exp_016_rerun_1024/selection_f1_full.json') as f:
+with open('/root/autodl-tmp/struct_self_consist_ie/output/exp_016_rerun_1024/selection_f1_full.json') as f:
     data = json.load(f)
 
 methods = data['ner']['methods']

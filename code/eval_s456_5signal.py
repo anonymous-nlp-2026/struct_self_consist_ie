@@ -5,13 +5,13 @@ import numpy as np
 from scipy.stats import spearmanr, kendalltau, rankdata
 from collections import Counter
 
-sys.path.insert(0, './code')
+sys.path.insert(0, '/root/autodl-tmp/struct_self_consist_ie/code')
 from consistency import compute_all_consistency_scores
 from evaluation import per_instance_f1
 
-DATA_N16 = "./output/exp_017_llama_conll_n16_s456/samples.jsonl"
-DATA_N8 = "./output/exp_017_llama_conll_infer/samples.jsonl"
-OUTPUT = "./output/exp_017_llama_conll_n16_s456/all_signals_report.json"
+DATA_N16 = "/root/autodl-tmp/struct_self_consist_ie/output/exp_017_llama_conll_n16_s456/samples.jsonl"
+DATA_N8 = "/root/autodl-tmp/struct_self_consist_ie/output/exp_017_llama_conll_infer/samples.jsonl"
+OUTPUT = "/root/autodl-tmp/struct_self_consist_ie/output/exp_017_llama_conll_n16_s456/all_signals_report.json"
 SUBTASK = "ner"
 
 def load_data(path):

@@ -2,7 +2,7 @@ import json
 import sys
 import os
 
-sys.path.insert(0, "./code")
+sys.path.insert(0, "/root/autodl-tmp/struct_self_consist_ie/code")
 from evaluation import per_instance_f1
 
 CONFIGS = {
@@ -28,7 +28,7 @@ CONFIGS = {
     },
 }
 
-OUTPUT_DIR = "./output"
+OUTPUT_DIR = "/root/autodl-tmp/struct_self_consist_ie/output"
 
 def gold_nonempty(gold, subtask):
     if subtask == "ner":

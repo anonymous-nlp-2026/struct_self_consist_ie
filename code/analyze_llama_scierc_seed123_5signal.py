@@ -5,13 +5,13 @@ import numpy as np
 from scipy.stats import spearmanr, rankdata
 from collections import Counter
 
-sys.path.insert(0, './code')
+sys.path.insert(0, '/root/autodl-tmp/struct_self_consist_ie/code')
 from unified_metrics import compute_entity_f1, compute_degeneracy, bootstrap_ci, bootstrap_delta_ci
 from consistency import compute_all_consistency_scores
 from evaluation import per_instance_f1
 
-DATA_PATH = "./output/exp_018_llama_scierc_seed123/samples.jsonl"
-OUTPUT_DIR = "./output/exp_007_llama_scierc_seed123"
+DATA_PATH = "/root/autodl-tmp/struct_self_consist_ie/output/exp_018_llama_scierc_seed123/samples.jsonl"
+OUTPUT_DIR = "/root/autodl-tmp/struct_self_consist_ie/output/exp_007_llama_scierc_seed123"
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 def load_data(path):

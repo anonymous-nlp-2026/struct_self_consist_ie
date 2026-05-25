@@ -5,33 +5,33 @@ import numpy as np
 from scipy.stats import spearmanr, rankdata
 from collections import Counter
 
-sys.path.insert(0, './code')
+sys.path.insert(0, '/root/autodl-tmp/struct_self_consist_ie/code')
 from consistency import compute_all_consistency_scores
 from evaluation import per_instance_f1
 
 EXPERIMENTS = {
     "qwen_seed42": {
-        "path": "./output/exp_012_rerun_1024/samples.jsonl",
+        "path": "/root/autodl-tmp/struct_self_consist_ie/output/exp_012_rerun_1024/samples.jsonl",
         "subtask": "ner", "dataset": "scierc",
     },
     "qwen_seed123": {
-        "path": "./output/exp_018_qwen_scierc_seed123/samples.jsonl",
+        "path": "/root/autodl-tmp/struct_self_consist_ie/output/exp_018_qwen_scierc_seed123/samples.jsonl",
         "subtask": "ner", "dataset": "scierc",
     },
     "qwen_seed456": {
-        "path": "./output/exp_018_qwen_scierc_seed456/samples.jsonl",
+        "path": "/root/autodl-tmp/struct_self_consist_ie/output/exp_018_qwen_scierc_seed456/samples.jsonl",
         "subtask": "ner", "dataset": "scierc",
     },
     "llama_seed42": {
-        "path": "./output/exp007_llama_inference/samples.jsonl",
+        "path": "/root/autodl-tmp/struct_self_consist_ie/output/exp007_llama_inference/samples.jsonl",
         "subtask": "ner", "dataset": "scierc",
     },
     "llama_seed123": {
-        "path": "./output/exp_018_llama_scierc_seed123/samples.jsonl",
+        "path": "/root/autodl-tmp/struct_self_consist_ie/output/exp_018_llama_scierc_seed123/samples.jsonl",
         "subtask": "ner", "dataset": "scierc",
     },
     "llama_seed456": {
-        "path": "./output/exp_018_llama_scierc_seed456/samples.jsonl",
+        "path": "/root/autodl-tmp/struct_self_consist_ie/output/exp_018_llama_scierc_seed456/samples.jsonl",
         "subtask": "ner", "dataset": "scierc",
     },
 }
@@ -133,7 +133,7 @@ for exp_id, cfg in EXPERIMENTS.items():
     print(f"Processing {exp_id}...")
     all_results[exp_id] = analyze(cfg["path"], cfg["subtask"])
 
-out_path = "./output/exp018_3seed_5signal_results.json"
+out_path = "/root/autodl-tmp/struct_self_consist_ie/output/exp018_3seed_5signal_results.json"
 with open(out_path, "w") as f:
     json.dump(all_results, f, indent=2, default=lambda o: float(o) if isinstance(o, (np.floating,)) else str(o))
 print(f"\nSaved to {out_path}")

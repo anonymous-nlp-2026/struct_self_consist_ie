@@ -10,7 +10,7 @@ Two confounds addressed:
 import json
 import sys
 
-BASE = "."
+BASE = "/root/autodl-tmp/struct_self_consist_ie"
 
 DATASETS = {
     "SciERC": {

@@ -2,7 +2,7 @@ import json
 import numpy as np
 from collections import defaultdict
 
-DATA_PATH = './output/exp_012_rerun_1024/samples.jsonl'
+DATA_PATH = '/root/autodl-tmp/struct_self_consist_ie/output/exp_012_rerun_1024/samples.jsonl'
 
 # ── helpers ──────────────────────────────────────────────────────────────────
 

@@ -7,7 +7,7 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from scipy import stats
 
-with open("./output/scatter_v2_data.json") as f:
+with open("/root/autodl-tmp/struct_self_consist_ie/output/scatter_v2_data.json") as f:
     data = json.load(f)
 
 CATEGORY_STYLE = {
@@ -65,7 +65,7 @@ ax.annotate(f'Spearman $\\rho$ = {rho:.3f} (p = {p_val:.4f})\n'
 
 plt.tight_layout()
 
-outdir = "./output/figures"
+outdir = "/root/autodl-tmp/struct_self_consist_ie/output/figures"
 import os
 os.makedirs(outdir, exist_ok=True)
 plt.savefig(f"{outdir}/fig_degeneracy_lp_scatter_v2.pdf", dpi=300, bbox_inches='tight')

@@ -22,7 +22,7 @@ from itertools import combinations
 from scipy.stats import spearmanr
 from scipy.optimize import linear_sum_assignment
 
-BASE = "."
+BASE = "/root/autodl-tmp/struct_self_consist_ie"
 OUTPUT_DIR = os.path.join(BASE, "output")
 RESULT_DIR = os.path.join(OUTPUT_DIR, "exp_009_v2")
 N_BOOTSTRAP = 2000

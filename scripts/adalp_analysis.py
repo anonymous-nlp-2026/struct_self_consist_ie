@@ -167,7 +167,7 @@ def degeneracy_bin_analysis(instances, tau):
 
 
 def main():
-    base = Path(".")
+    base = Path("/root/autodl-tmp/struct_self_consist_ie")
 
     print("Loading datasets...")
     all_data = {}

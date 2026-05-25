@@ -1,9 +1,9 @@
 #!/bin/bash
 set -e
-BASE=.
+BASE=/root/autodl-tmp/struct_self_consist_ie
 SCRIPT_PATH=$BASE/artifacts/experiments/het_temp/run_het_temp.py
 OUT_BASE=$BASE/output/exp_backup1_het_temp
-PYTHON=python
+PYTHON=/root/miniconda3/bin/python3
 
 echo "=== het_temp Backup 1: SciERC all combos ==="
 echo "Started at $(date)"

@@ -221,7 +221,7 @@ def process_dataset(name, file_map):
 
 
 def main():
-    os.chdir(".")
+    os.chdir("/root/autodl-tmp/struct_self_consist_ie")
 
     all_lines = []
     all_results = {}

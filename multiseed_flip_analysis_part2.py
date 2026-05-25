@@ -32,7 +32,7 @@ def lp_select(samples):
     best_idx = max(range(len(samples)), key=lambda i: samples[i]["mean_logprob"])
     return best_idx, samples[best_idx]
 
-BASE = "."
+BASE = "/root/autodl-tmp/struct_self_consist_ie"
 constrained_paths = {
     "seed42": f"{BASE}/output/exp_012_rerun_1024/samples_with_logprobs.jsonl",
     "seed123": f"{BASE}/output/exp_018_qwen_scierc_seed123/samples.jsonl",

@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
-source activate
-cd .
+source /root/miniconda3/bin/activate
+cd /root/autodl-tmp/struct_self_consist_ie
 
 SEED=${1:?Usage: bash run_32b_fewnerd_inference.sh <seed> <gpu_ids> [tp_size]}
 GPU_IDS=${2:?Specify GPU IDs, e.g. "0,1"}

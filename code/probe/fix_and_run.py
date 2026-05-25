@@ -3,8 +3,8 @@
 
 import re
 
-PROBE_PATH = "./code/probe/hidden_state_probe.py"
-EXTRACT_PATH = "./code/probe/extract_hidden_states.py"
+PROBE_PATH = "/root/autodl-tmp/struct_self_consist_ie/code/probe/hidden_state_probe.py"
+EXTRACT_PATH = "/root/autodl-tmp/struct_self_consist_ie/code/probe/extract_hidden_states.py"
 
 # --- Fix 1: entity_set in both files ---
 old_entity_set = 'return {(e["start"], e["end"], e["type"]) for e in ext.get("entities", [])}'

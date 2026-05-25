@@ -76,7 +76,7 @@ def main():
     parser.add_argument("--seeds", nargs="+", type=int, required=True)
     args = parser.parse_args()
 
-    BASE = "."
+    BASE = "/root/autodl-tmp/struct_self_consist_ie"
     seed_paths = {
         42: f"{BASE}/output/e2_pretrained_fewnerd/samples.jsonl",
         123: f"{BASE}/output/e2_pretrained_fewnerd_s123/samples.jsonl",

@@ -12,12 +12,12 @@ N_SAMPLES = 8
 
 DATASETS = {
     "scierc": {
-        "fs": "./output/exp001_n16_seed42/samples.jsonl",
-        "zs": "./results/exp_freeform_ablation/samples.jsonl",
+        "fs": "/root/autodl-tmp/struct_self_consist_ie/output/exp001_n16_seed42/samples.jsonl",
+        "zs": "/root/autodl-tmp/struct_self_consist_ie/results/exp_freeform_ablation/samples.jsonl",
     },
     "conll": {
-        "fs": "./output/exp_002_conll_n16/samples.jsonl",
-        "zs": "./output/review_round9_experiments/freeform_conll/seed_42/samples.jsonl",
+        "fs": "/root/autodl-tmp/struct_self_consist_ie/output/exp_002_conll_n16/samples.jsonl",
+        "zs": "/root/autodl-tmp/struct_self_consist_ie/output/review_round9_experiments/freeform_conll/seed_42/samples.jsonl",
     },
 }
 
@@ -182,7 +182,7 @@ def main():
         results[dataset] = analyze_dataset(dataset)
         print(f"  {dataset} done: n={results[dataset]['n_instances']}", file=sys.stderr)
 
-    out_path = "./output/fs_vs_zs_error_correlation.json"
+    out_path = "/root/autodl-tmp/struct_self_consist_ie/output/fs_vs_zs_error_correlation.json"
     with open(out_path, "w") as f:
         json.dump(results, f, indent=2)
     print(f"Results saved to {out_path}", file=sys.stderr)

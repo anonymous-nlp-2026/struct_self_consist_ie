@@ -5,9 +5,9 @@
 MODEL="checkpoints/qwen3-8b-fewnerd-exp021-merged"
 DATA_DIR="data/fewnerd"
 BASE_OUT="output/exp_021_inference"
-PYTHON="python"
+PYTHON="/root/miniconda3/bin/python"
 
-cd .
+cd /root/autodl-tmp/struct_self_consist_ie
 
 TOTAL=37648
 SHARD_SIZE=9412

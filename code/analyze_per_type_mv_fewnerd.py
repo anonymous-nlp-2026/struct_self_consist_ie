@@ -5,7 +5,7 @@ import numpy as np
 from collections import Counter, defaultdict
 from scipy.stats import pearsonr, spearmanr
 
-BASE = "."
+BASE = "/root/autodl-tmp/struct_self_consist_ie"
 SEEDS = {
     42: f"{BASE}/output/fewnerd_mf4v2_seed42/samples.jsonl",
     123: f"{BASE}/output/fewnerd_mf4v2_seed123/samples.jsonl",

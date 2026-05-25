@@ -8,7 +8,7 @@ import random
 import numpy as np
 from scipy.stats import spearmanr
 
-sys.path.insert(0, "./code")
+sys.path.insert(0, "/root/autodl-tmp/struct_self_consist_ie/code")
 from data_utils import load_scierc, load_conll2003, load_fewnerd
 from sampling import (
     VLLMSampler, run_sampling_pipeline, save_sampled_results,
@@ -16,7 +16,7 @@ from sampling import (
 )
 from unified_metrics import compute_entity_f1
 
-BASE = "."
+BASE = "/root/autodl-tmp/struct_self_consist_ie"
 OUT_DIR = f"{BASE}/output/dev_set_lp_probe"
 os.makedirs(OUT_DIR, exist_ok=True)
 

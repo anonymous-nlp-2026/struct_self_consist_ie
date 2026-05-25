@@ -8,7 +8,7 @@ import sys
 import numpy as np
 from collections import defaultdict, Counter
 
-BASE = "."
+BASE = "/root/autodl-tmp/struct_self_consist_ie"
 
 SEED_FILES = {
     42: f"{BASE}/output/exp_021_inference/samples.jsonl",

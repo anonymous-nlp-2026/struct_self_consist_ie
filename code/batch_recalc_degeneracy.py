@@ -6,7 +6,7 @@ from unified_metrics import (
     load_and_filter, compute_sample_f1s, compute_degeneracy, compute_greedy_f1
 )
 
-BASE = "./output"
+BASE = "/root/autodl-tmp/struct_self_consist_ie/output"
 
 EXPERIMENTS = [
     # Qwen3-8B SciERC T=1.0

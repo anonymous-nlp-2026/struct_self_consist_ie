@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
-cd .
+cd /root/autodl-tmp/struct_self_consist_ie
 
 echo "=== Step 1: Merge LoRA adapter ==="
 python3 -c "
@@ -8,7 +8,7 @@ from peft import PeftModel
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import torch, os
 
-base_path = './models/Qwen/Qwen3-8B'
+base_path = '/root/autodl-tmp/.hf_cache/Qwen/Qwen3-8B'
 adapter_path = 'checkpoints/qwen3-8b-conll2003-lora/checkpoint-400'
 merged_path = 'checkpoints/qwen3-8b-conll2003-merged'
 

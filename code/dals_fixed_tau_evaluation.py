@@ -9,7 +9,7 @@ TAU = 0.05
 N_BOOTSTRAP = 10000
 RNG_SEED = 42
 
-BASE = "."
+BASE = "/root/autodl-tmp/struct_self_consist_ie"
 
 DATASETS = {
     "scierc_n8_seed42": "output/exp_012_rerun_1024/samples.jsonl",

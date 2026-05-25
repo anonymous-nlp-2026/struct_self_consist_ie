@@ -106,7 +106,7 @@ configs = [
     },
 ]
 
-base = "."
+base = "/root/autodl-tmp/struct_self_consist_ie"
 results = []
 
 for cfg in configs:

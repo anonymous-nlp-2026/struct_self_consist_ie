@@ -7,7 +7,7 @@ import json
 import numpy as np
 from scipy.stats import spearmanr
 
-BASE = "."
+BASE = "/root/autodl-tmp/struct_self_consist_ie"
 
 DATASETS = {
     "3-epoch": f"{BASE}/output/exp_029a_scierc_3epoch/samples.jsonl",

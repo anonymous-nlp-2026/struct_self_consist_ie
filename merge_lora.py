@@ -2,9 +2,9 @@ from peft import PeftModel
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import torch, os
 
-base_path = './models/LLM-Research/Meta-Llama-3___1-8B-Instruct'
-lora_path = './checkpoints/llama3.1-8b-scierc-lora'
-out_path = './checkpoints/llama3.1-8b-scierc-merged'
+base_path = '/root/autodl-tmp/.hf_cache/LLM-Research/Meta-Llama-3___1-8B-Instruct'
+lora_path = '/root/autodl-tmp/struct_self_consist_ie/checkpoints/llama3.1-8b-scierc-lora'
+out_path = '/root/autodl-tmp/struct_self_consist_ie/checkpoints/llama3.1-8b-scierc-merged'
 
 print('Loading base model...')
 model = AutoModelForCausalLM.from_pretrained(base_path, torch_dtype=torch.bfloat16, device_map='cpu')

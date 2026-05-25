@@ -18,11 +18,11 @@ from scipy.stats import spearmanr
 
 warnings.filterwarnings("ignore", category=RuntimeWarning)
 
-sys.path.insert(0, "./code")
+sys.path.insert(0, "/root/autodl-tmp/struct_self_consist_ie/code")
 from consistency import compute_all_consistency_scores
 from evaluation import per_instance_f1, relation_strict_match
 
-BASE = Path(".")
+BASE = Path("/root/autodl-tmp/struct_self_consist_ie")
 DATA_PATH = BASE / "output" / "exp_012_logprob" / "samples_with_logprobs.jsonl"
 OUT_DIR = BASE / "output" / "exp004v2_re_diagnostic"
 

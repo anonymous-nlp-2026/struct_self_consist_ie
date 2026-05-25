@@ -7,7 +7,7 @@ import os
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from evaluation import entity_strict_match
 
-BASE = "."
+BASE = "/root/autodl-tmp/struct_self_consist_ie"
 SCIERC_PATH = f"{BASE}/output/exp_012_rerun_1024/samples.jsonl"
 
 # Load ALL instances

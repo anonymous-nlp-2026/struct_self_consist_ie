@@ -2,7 +2,7 @@
 set -e
 
 export CUDA_VISIBLE_DEVICES=1
-cd .
+cd /root/autodl-tmp/struct_self_consist_ie
 
 echo "=== LLaMA 3.1-8B Few-NERD Single GPU Training ==="
 echo "GPU: $CUDA_VISIBLE_DEVICES"

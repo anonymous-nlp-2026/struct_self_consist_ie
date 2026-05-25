@@ -6,7 +6,7 @@ import json
 import sys
 from collections import defaultdict
 
-BASE = "."
+BASE = "/root/autodl-tmp/struct_self_consist_ie"
 
 DATASETS = {
     "SciERC": {

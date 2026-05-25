@@ -3,11 +3,11 @@ import numpy as np
 from itertools import combinations
 from scipy.stats import spearmanr
 
-sys.path.insert(0, './code')
+sys.path.insert(0, '/root/autodl-tmp/struct_self_consist_ie/code')
 from consistency import _ner_soft_jaccard_pair
 from unified_metrics import load_and_filter, compute_sample_f1s, compute_degeneracy, compute_entity_f1
 
-DATA_PATH = "./output/exp002_conll2003/samples.jsonl"
+DATA_PATH = "/root/autodl-tmp/struct_self_consist_ie/output/exp002_conll2003/samples.jsonl"
 
 instances = load_and_filter(DATA_PATH, gold_filter=True)
 print(f"Loaded {len(instances)} gold-filtered instances")

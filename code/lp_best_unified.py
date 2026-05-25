@@ -4,7 +4,7 @@ import json
 import os
 import sys
 
-DATA_ROOT = "./output"
+DATA_ROOT = "/root/autodl-tmp/struct_self_consist_ie/output"
 
 DATASETS = {
     "SciERC": [

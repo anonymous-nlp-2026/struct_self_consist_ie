@@ -11,7 +11,7 @@ from itertools import combinations
 from scipy import stats
 from scipy.optimize import linear_sum_assignment
 
-sys.path.insert(0, './code')
+sys.path.insert(0, '/root/autodl-tmp/struct_self_consist_ie/code')
 from consistency import _span_soft_jaccard, fleiss_kappa_surface, structural_consistency_soft_jaccard
 from evaluation import per_instance_f1
 
@@ -75,7 +75,7 @@ def compute_instance_components(samples):
 
 
 def main():
-    data_path = './output/mvp_pilot_004/samples.jsonl'
+    data_path = '/root/autodl-tmp/struct_self_consist_ie/output/mvp_pilot_004/samples.jsonl'
     instances = []
     with open(data_path) as f:
         for line in f:
@@ -171,7 +171,7 @@ def main():
         rho_c, p_c = stats.spearmanr(cs, cond_f1s)
         results['conditional'][name] = {'rho': float(rho_c), 'p_value': float(p_c), 'mean': float(np.mean(cs))}
 
-    out_path = './output/mvp_pilot_004/e1_component_decomposition.json'
+    out_path = '/root/autodl-tmp/struct_self_consist_ie/output/mvp_pilot_004/e1_component_decomposition.json'
     with open(out_path, 'w') as f:
         json.dump(results, f, indent=2)
     print(f"\nResults saved to {out_path}")

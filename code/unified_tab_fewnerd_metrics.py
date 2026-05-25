@@ -8,7 +8,7 @@ import os
 import numpy as np
 from scipy.stats import spearmanr
 
-sys.path.insert(0, './code')
+sys.path.insert(0, '/root/autodl-tmp/struct_self_consist_ie/code')
 from evaluation import per_instance_f1
 
 SUBTASK = "ner"
@@ -91,7 +91,7 @@ def compute_metrics(data, label="dataset"):
 
 
 if __name__ == "__main__":
-    base = "./output"
+    base = "/root/autodl-tmp/struct_self_consist_ie/output"
 
     datasets = {
         "SciERC": os.path.join(base, "exp_012_rerun_1024/samples.jsonl"),

@@ -5,7 +5,7 @@ Computes selection F1, Spearman rho, and AUROC for the verifier and
 all 5 unsupervised signals (LP, SJ, FK, EM, VC).
 
 Usage:
-    cd .
+    cd /root/autodl-tmp/struct_self_consist_ie
     python evaluate_verifier.py \
         --predictions output/exp_019_supervised_verifier/oof_predictions_ner.json \
         --data_path output/exp_012_rerun_1024/samples.jsonl \

@@ -12,7 +12,7 @@ from itertools import combinations
 
 import numpy as np
 
-BASE = "."
+BASE = "/root/autodl-tmp/struct_self_consist_ie"
 
 DATASETS = {
     "scierc": f"{BASE}/output/exp_012_rerun_1024/samples.jsonl",

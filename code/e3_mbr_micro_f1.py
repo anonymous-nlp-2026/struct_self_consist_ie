@@ -15,7 +15,7 @@ import json
 import sys
 from collections import Counter
 
-BASE = "."
+BASE = "/root/autodl-tmp/struct_self_consist_ie"
 
 DATASETS = {
     "SciERC": {

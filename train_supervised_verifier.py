@@ -5,7 +5,7 @@
 Outputs out-of-fold predictions for evaluation.
 
 Usage:
-    cd .
+    cd /root/autodl-tmp/struct_self_consist_ie
     python train_supervised_verifier.py \
         --data_path output/exp_012_rerun_1024/samples.jsonl \
         --subtask ner \

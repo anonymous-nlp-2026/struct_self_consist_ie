@@ -7,15 +7,15 @@ import sys
 import os
 import numpy as np
 
-sys.path.insert(0, "./code")
+sys.path.insert(0, "/root/autodl-tmp/struct_self_consist_ie/code")
 from unified_metrics import (
     compute_entity_f1, compute_degeneracy, load_and_filter,
     compute_sample_f1s, compute_greedy_f1, get_lp_selection_idx,
     bootstrap_ci
 )
 
-DATA_PATH = "./output/exp_012_rerun_1024/samples.jsonl"
-OUT_DIR = "./output/unified_metrics_regression"
+DATA_PATH = "/root/autodl-tmp/struct_self_consist_ie/output/exp_012_rerun_1024/samples.jsonl"
+OUT_DIR = "/root/autodl-tmp/struct_self_consist_ie/output/unified_metrics_regression"
 os.makedirs(OUT_DIR, exist_ok=True)
 
 N_SAMPLES = 8

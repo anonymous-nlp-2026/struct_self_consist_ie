@@ -1,7 +1,7 @@
 import re
 
 # ---- Patch run_bootstrap_loo.py ----
-with open('./run_bootstrap_loo.py') as f:
+with open('/root/autodl-tmp/struct_self_consist_ie/run_bootstrap_loo.py') as f:
     code = f.read()
 
 # 1. Add filter_gold_nonempty after load_instances function
@@ -55,12 +55,12 @@ new_part2_load = '''            insts_raw = load_instances(path)
 
 code = code.replace(old_part2_load, new_part2_load)
 
-with open('./run_bootstrap_loo.py', 'w') as f:
+with open('/root/autodl-tmp/struct_self_consist_ie/run_bootstrap_loo.py', 'w') as f:
     f.write(code)
 print("Patched run_bootstrap_loo.py")
 
 # ---- Patch run_loo_v2.py ----
-with open('./run_loo_v2.py') as f:
+with open('/root/autodl-tmp/struct_self_consist_ie/run_loo_v2.py') as f:
     code2 = f.read()
 
 # 1. Add filter_gold_nonempty after load_instances
@@ -97,6 +97,6 @@ new_loo_load = '''            insts_raw = load_instances(path)
 
 code2 = code2.replace(old_loo_load, new_loo_load)
 
-with open('./run_loo_v2.py', 'w') as f:
+with open('/root/autodl-tmp/struct_self_consist_ie/run_loo_v2.py', 'w') as f:
     f.write(code2)
 print("Patched run_loo_v2.py")

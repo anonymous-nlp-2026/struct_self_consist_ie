@@ -1,7 +1,7 @@
 import json, statistics
 from collections import Counter
 
-DATA = "./output/exp_020_pilot/samples.jsonl"
+DATA = "/root/autodl-tmp/struct_self_consist_ie/output/exp_020_pilot/samples.jsonl"
 
 def entity_set(ents):
     return {(e["text"], e["type"], e["start"], e["end"]) for e in ents}

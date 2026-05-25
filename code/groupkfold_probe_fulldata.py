@@ -19,7 +19,7 @@ from sklearn.model_selection import GroupKFold, StratifiedKFold
 from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import roc_auc_score
 
-BASE_DIR = "."
+BASE_DIR = "/root/autodl-tmp/struct_self_consist_ie"
 INPUT_DIR = os.path.join(BASE_DIR, "output/entity_probe_fulldata")
 OUTPUT_DIR = INPUT_DIR
 

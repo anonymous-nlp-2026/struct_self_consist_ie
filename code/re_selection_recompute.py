@@ -15,8 +15,8 @@ from consistency import (
 )
 from evaluation import per_instance_f1
 
-DATA_PATH = "./output/exp_012_rerun_1024/samples.jsonl"
-OUTPUT_PATH = "./output/review_round2/re_selection_recompute.json"
+DATA_PATH = "/root/autodl-tmp/struct_self_consist_ie/output/exp_012_rerun_1024/samples.jsonl"
+OUTPUT_PATH = "/root/autodl-tmp/struct_self_consist_ie/output/review_round2/re_selection_recompute.json"
 
 N_RANDOM_REPEATS = 200
 

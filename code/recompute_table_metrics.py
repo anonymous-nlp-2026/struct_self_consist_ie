@@ -70,7 +70,7 @@ def analyze_dataset(data, label):
     print(f"  LP_delta   = {ld:+.2f}pp")
     return {"n":N,"greedy":round(gm,6),"oracle":round(om,6),"headroom":round(hd,2),"degen":round(dp,1),"mean_lp_rho":round(float(rm),6),"max_lp_rho":round(float(rx),6),"lp_sel":round(lsm,6),"lp_delta":round(ld,2)}
 
-base = "./output"
+base = "/root/autodl-tmp/struct_self_consist_ie/output"
 fewnerd = load_data(f"{base}/exp_021_inference/samples.jsonl")
 fr = analyze_dataset(fewnerd, "Few-NERD")
 conll = load_data(f"{base}/exp002_conll2003/samples.jsonl")

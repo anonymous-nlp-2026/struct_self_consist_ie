@@ -7,7 +7,7 @@ Target definition: degeneracy = fraction of instances where all N samples produc
 import json
 import os
 
-BASE = "."
+BASE = "/root/autodl-tmp/struct_self_consist_ie"
 N = 8
 
 EXPERIMENTS = {

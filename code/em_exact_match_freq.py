@@ -11,7 +11,7 @@ CONFIGS = OrderedDict([
     ("wnut17", ("exp003_wnut17_eval/samples.jsonl", 8)),
 ])
 
-BASE = "./output"
+BASE = "/root/autodl-tmp/struct_self_consist_ie/output"
 OUT_DIR = os.path.join(BASE, "review_round2")
 os.makedirs(OUT_DIR, exist_ok=True)
 

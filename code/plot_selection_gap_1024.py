@@ -22,7 +22,7 @@ plt.rcParams.update({
     'text.usetex': False,
 })
 
-FIG_DIR = Path('./artifacts/figures')
+FIG_DIR = Path('/root/autodl-tmp/struct_self_consist_ie/artifacts/figures')
 FIG_DIR.mkdir(parents=True, exist_ok=True)
 
 # --- Data from exp_016_rerun_1024 ---

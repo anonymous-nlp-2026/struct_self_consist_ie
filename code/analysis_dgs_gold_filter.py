@@ -7,7 +7,7 @@ import json
 import os
 import sys
 import numpy as np
-sys.path.insert(0, "./code")
+sys.path.insert(0, "/root/autodl-tmp/struct_self_consist_ie/code")
 from unified_metrics import compute_entity_f1, compute_degeneracy
 
 
@@ -99,13 +99,13 @@ def bootstrap_delta_ci(a, b, n_boot=10000, ci=0.95, seed=42):
 
 
 datasets = [
-    ('./output/exp_012_rerun_1024/samples.jsonl', 'SciERC', 8),
-    ('./output/exp_002_conll_n16_r1024/samples.jsonl', 'CoNLL', 8),
-    ('./output/exp_027_fewnerd_n16/samples.jsonl', 'FewNERD', 8),
+    ('/root/autodl-tmp/struct_self_consist_ie/output/exp_012_rerun_1024/samples.jsonl', 'SciERC', 8),
+    ('/root/autodl-tmp/struct_self_consist_ie/output/exp_002_conll_n16_r1024/samples.jsonl', 'CoNLL', 8),
+    ('/root/autodl-tmp/struct_self_consist_ie/output/exp_027_fewnerd_n16/samples.jsonl', 'FewNERD', 8),
 ]
 
 # Load old results for comparison
-old_path = './output/dgs_selection_results.json'
+old_path = '/root/autodl-tmp/struct_self_consist_ie/output/dgs_selection_results.json'
 old_results = {}
 if os.path.exists(old_path):
     with open(old_path) as f:
@@ -249,7 +249,7 @@ for name, ds in json_output['datasets'].items():
     print(f"  {name}: {d['delta']:+.4f} [{d['ci_lo']:.4f}, {d['ci_hi']:.4f}]")
 
 # Save
-out_path = './output/dgs_selection_results.json'
+out_path = '/root/autodl-tmp/struct_self_consist_ie/output/dgs_selection_results.json'
 with open(out_path, 'w') as f:
     json.dump(json_output, f, indent=2)
 print(f"\nJSON saved to {out_path}")

@@ -17,7 +17,7 @@ from scipy.optimize import linear_sum_assignment
 from scipy.stats import spearmanr
 from itertools import combinations
 
-BASE = "."
+BASE = "/root/autodl-tmp/struct_self_consist_ie"
 
 def span_soft_jaccard(s1s, s1e, s2s, s2e):
     overlap = max(0, min(s1e, s2e) - max(s1s, s2s))

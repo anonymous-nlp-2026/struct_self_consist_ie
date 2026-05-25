@@ -11,7 +11,7 @@ import time
 import numpy as np
 from collections import defaultdict, Counter
 
-BASE = "."
+BASE = "/root/autodl-tmp/struct_self_consist_ie"
 OUTPUT_DIR = f"{BASE}/artifacts/e_theta"
 N_USE = 8  # subsample to N=8
 

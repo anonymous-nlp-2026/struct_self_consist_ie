@@ -6,11 +6,11 @@ from collections import Counter
 from scipy.stats import spearmanr
 from scipy.stats import rankdata
 
-sys.path.insert(0, './code')
+sys.path.insert(0, '/root/autodl-tmp/struct_self_consist_ie/code')
 from consistency import structural_consistency_soft_jaccard, fleiss_kappa_surface, _ner_soft_jaccard_pair, _extract_surface_keys
 from evaluation import per_instance_f1
 
-BASE = "./output"
+BASE = "/root/autodl-tmp/struct_self_consist_ie/output"
 SHARDS = [
     f"{BASE}/exp_021_fewnerd_n8_seed789_shard{i}/samples.jsonl" for i in range(3)
 ]

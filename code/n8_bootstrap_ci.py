@@ -5,12 +5,12 @@ import numpy as np
 from collections import Counter
 from scipy.stats import spearmanr
 
-sys.path.insert(0, './code')
+sys.path.insert(0, '/root/autodl-tmp/struct_self_consist_ie/code')
 from consistency import structural_consistency_soft_jaccard, fleiss_kappa_surface
 from evaluation import per_instance_f1
 
-DATA_PATH = "./output/exp_012_rerun_1024/samples.jsonl"
-OUT_PATH = "./output/review_round2/n8_bootstrap_ci.json"
+DATA_PATH = "/root/autodl-tmp/struct_self_consist_ie/output/exp_012_rerun_1024/samples.jsonl"
+OUT_PATH = "/root/autodl-tmp/struct_self_consist_ie/output/review_round2/n8_bootstrap_ci.json"
 SUBTASK = "ner"
 
 def load_data(path):

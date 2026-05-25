@@ -6,12 +6,12 @@ import numpy as np
 from collections import Counter
 from scipy.stats import spearmanr
 
-sys.path.insert(0, './code')
+sys.path.insert(0, '/root/autodl-tmp/struct_self_consist_ie/code')
 from consistency import structural_consistency_soft_jaccard, fleiss_kappa_surface
 from evaluation import per_instance_f1
 
-DATA_PATH = "./output/exp_021_inference/samples.jsonl"
-OUTPUT_DIR = "./output/exp_021_inference"
+DATA_PATH = "/root/autodl-tmp/struct_self_consist_ie/output/exp_021_inference/samples.jsonl"
+OUTPUT_DIR = "/root/autodl-tmp/struct_self_consist_ie/output/exp_021_inference"
 
 # Force unbuffered output
 sys.stdout = open(sys.stdout.fileno(), mode='w', buffering=1)

@@ -4,10 +4,10 @@ from itertools import combinations
 from pathlib import Path
 
 CONFIGS = {
-    "qwen_scierc": "./output/exp_012_rerun_1024/samples.jsonl",
-    "llama_scierc": "./output/exp007_llama_inference/samples.jsonl",
-    "qwen_conll": "./output/exp002_conll2003/samples.jsonl",
-    "llama_conll": "./output/exp_017_llama_conll_infer/samples.jsonl",
+    "qwen_scierc": "/root/autodl-tmp/struct_self_consist_ie/output/exp_012_rerun_1024/samples.jsonl",
+    "llama_scierc": "/root/autodl-tmp/struct_self_consist_ie/output/exp007_llama_inference/samples.jsonl",
+    "qwen_conll": "/root/autodl-tmp/struct_self_consist_ie/output/exp002_conll2003/samples.jsonl",
+    "llama_conll": "/root/autodl-tmp/struct_self_consist_ie/output/exp_017_llama_conll_infer/samples.jsonl",
 }
 
 def load_data(path):
@@ -225,7 +225,7 @@ for name, path in CONFIGS.items():
     results[name] = r
     print(f"  Done: excess_agreement={r['excess_agreement']}")
 
-out_dir = Path("./output/review_round2")
+out_dir = Path("/root/autodl-tmp/struct_self_consist_ie/output/review_round2")
 out_dir.mkdir(parents=True, exist_ok=True)
 out_path = out_dir / "fk_independence_test.json"
 with open(out_path, "w") as f:

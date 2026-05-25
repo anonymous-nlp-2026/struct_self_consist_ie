@@ -4,12 +4,12 @@ import json
 import sys
 from collections import Counter
 
-sys.path.insert(0, './code')
+sys.path.insert(0, '/root/autodl-tmp/struct_self_consist_ie/code')
 from evaluation import per_instance_f1
 
-DATA_PATH = "./output/exp_012_rerun_1024/samples.jsonl"
-COMPARISON_PATH = "./output/exp_016_rerun_1024/selection_f1_comparison.json"
-FULL_PATH = "./output/exp_016_rerun_1024/selection_f1_full.json"
+DATA_PATH = "/root/autodl-tmp/struct_self_consist_ie/output/exp_012_rerun_1024/samples.jsonl"
+COMPARISON_PATH = "/root/autodl-tmp/struct_self_consist_ie/output/exp_016_rerun_1024/selection_f1_comparison.json"
+FULL_PATH = "/root/autodl-tmp/struct_self_consist_ie/output/exp_016_rerun_1024/selection_f1_full.json"
 
 
 def load_data(path):

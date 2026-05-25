@@ -14,7 +14,7 @@ Parts:
   4. Best-of-N selection F1
 
 Usage:
-    cd .
+    cd /root/autodl-tmp/struct_self_consist_ie
     python code/exp_016_v2_ensemble.py
 """
 
@@ -554,10 +554,10 @@ def part4_best_of_n_selection(
 
 def main():
     parser = argparse.ArgumentParser(description="exp-016 v2: Signal ensemble analysis")
-    parser.add_argument("--ner_seed42_dir", default="./output/exp_001_seed42_v2")
-    parser.add_argument("--ner_seed123_dir", default="./output/exp_001_seed123_v2")
-    parser.add_argument("--re_dir", default="./output/exp_008_re_n16_v2")
-    parser.add_argument("--output_dir", default="./output/exp_016_v2")
+    parser.add_argument("--ner_seed42_dir", default="/root/autodl-tmp/struct_self_consist_ie/output/exp_001_seed42_v2")
+    parser.add_argument("--ner_seed123_dir", default="/root/autodl-tmp/struct_self_consist_ie/output/exp_001_seed123_v2")
+    parser.add_argument("--re_dir", default="/root/autodl-tmp/struct_self_consist_ie/output/exp_008_re_n16_v2")
+    parser.add_argument("--output_dir", default="/root/autodl-tmp/struct_self_consist_ie/output/exp_016_v2")
     args = parser.parse_args()
 
     os.makedirs(args.output_dir, exist_ok=True)

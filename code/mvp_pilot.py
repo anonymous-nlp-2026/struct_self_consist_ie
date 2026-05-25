@@ -5,7 +5,7 @@ import os
 import sys
 import time
 
-sys.path.insert(0, './code')
+sys.path.insert(0, '/root/autodl-tmp/struct_self_consist_ie/code')
 
 import numpy as np
 
@@ -20,9 +20,9 @@ from evaluation import (
     spearman_correlation, compute_sample_f1_distribution,
 )
 
-MODEL = "./checkpoints/qwen3-8b-scierc-merged"
-TEST_DATA = "./data/test.jsonl"
-OUTPUT_DIR = "./output/mvp_pilot_001"
+MODEL = "/root/autodl-tmp/struct_self_consist_ie/checkpoints/qwen3-8b-scierc-merged"
+TEST_DATA = "/root/autodl-tmp/struct_self_consist_ie/data/test.jsonl"
+OUTPUT_DIR = "/root/autodl-tmp/struct_self_consist_ie/output/mvp_pilot_001"
 
 def main():
     os.makedirs(OUTPUT_DIR, exist_ok=True)

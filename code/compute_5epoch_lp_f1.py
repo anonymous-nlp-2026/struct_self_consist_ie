@@ -5,8 +5,8 @@ import sys
 import numpy as np
 
 PATHS = {
-    42:  "./output/fewnerd_5epoch_s42/samples.jsonl",
-    123: "./output/fewnerd_5epoch_s123/samples.jsonl",
+    42:  "/root/autodl-tmp/struct_self_consist_ie/output/fewnerd_5epoch_s42/samples.jsonl",
+    123: "/root/autodl-tmp/struct_self_consist_ie/output/fewnerd_5epoch_s123/samples.jsonl",
 }
 
 def entity_strict_tp_fp_fn(pred_entities, gold_entities):

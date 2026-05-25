@@ -14,14 +14,14 @@ import sys
 import numpy as np
 from scipy.stats import spearmanr
 
-sys.path.insert(0, "./code")
+sys.path.insert(0, "/root/autodl-tmp/struct_self_consist_ie/code")
 from unified_metrics import (
     compute_entity_f1, compute_degeneracy, load_and_filter,
     compute_sample_f1s, compute_greedy_f1, get_lp_selection_idx,
     bootstrap_ci
 )
 
-BASE = "."
+BASE = "/root/autodl-tmp/struct_self_consist_ie"
 OUT_DIR = f"{BASE}/output/prescriptive_analysis"
 os.makedirs(OUT_DIR, exist_ok=True)
 

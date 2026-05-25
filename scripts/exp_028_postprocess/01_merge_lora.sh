@@ -4,13 +4,13 @@
 # Output: checkpoints/qwen3-8b-fewnerd-5epoch-merged/
 set -e
 
-source activate
-cd .
+source /root/miniconda3/bin/activate
+cd /root/autodl-tmp/struct_self_consist_ie
 
 # The export config already exists at export_config_fewnerd_5epoch.yaml
 # It points to the correct adapter and output paths
 echo "Merging LoRA adapter to full model..."
-echo "  Base model: ./models/Qwen/Qwen3-8B"
+echo "  Base model: /root/autodl-tmp/.hf_cache/Qwen/Qwen3-8B"
 echo "  Adapter: checkpoints/qwen3-8b-fewnerd-5epoch-lora/"
 echo "  Output: checkpoints/qwen3-8b-fewnerd-5epoch-merged/"
 

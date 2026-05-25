@@ -23,8 +23,8 @@ from sklearn.preprocessing import StandardScaler
 
 warnings.filterwarnings("ignore")
 
-DATA_DIR = "./output/hidden_state_probe"
-SAMPLES_PATH = "./output/exp_012_logprob/samples_with_logprobs.jsonl"
+DATA_DIR = "/root/autodl-tmp/struct_self_consist_ie/output/hidden_state_probe"
+SAMPLES_PATH = "/root/autodl-tmp/struct_self_consist_ie/output/exp_012_logprob/samples_with_logprobs.jsonl"
 
 CV_FOLDS = 5
 SEEDS = [42, 123, 456]

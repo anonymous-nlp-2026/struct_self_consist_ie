@@ -9,7 +9,7 @@ import os
 import sys
 import time
 
-sys.path.insert(0, './code')
+sys.path.insert(0, '/root/autodl-tmp/struct_self_consist_ie/code')
 
 from data_utils import load_uie_jsonl
 from sampling import (
@@ -17,9 +17,9 @@ from sampling import (
     realign_spans, SCIERC_SCHEMA_HINT, UIE_JSON_SCHEMA,
 )
 
-MODEL = "./checkpoints/qwen3-8b-scierc-merged-v2"
-TEST_DATA = "./data/test.jsonl"
-OUTPUT_DIR = "./output/exp_012_logprob"
+MODEL = "/root/autodl-tmp/struct_self_consist_ie/checkpoints/qwen3-8b-scierc-merged-v2"
+TEST_DATA = "/root/autodl-tmp/struct_self_consist_ie/data/test.jsonl"
+OUTPUT_DIR = "/root/autodl-tmp/struct_self_consist_ie/output/exp_012_logprob"
 
 
 def main():

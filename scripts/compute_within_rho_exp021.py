@@ -79,14 +79,14 @@ def compute_within_rho(input_path, label):
 # exp_027 (3-epoch, same 5000 instances as exp_028, N=8 from 16)
 print("=== exp_027 (3-epoch, 5000 instances, N=8) ===")
 r1 = compute_within_rho(
-    "./output/exp_027_fewnerd_n16/samples.jsonl",
+    "/root/autodl-tmp/struct_self_consist_ie/output/exp_027_fewnerd_n16/samples.jsonl",
     "exp_027_3epoch_5k"
 )
 
 # exp_021 full (3-epoch, full 37648 instances, N=8)
 print("\n=== exp_021 full (3-epoch, full dataset, N=8) ===")
 r2 = compute_within_rho(
-    "./output/exp_021_inference/samples.jsonl",
+    "/root/autodl-tmp/struct_self_consist_ie/output/exp_021_inference/samples.jsonl",
     "exp_021_3epoch_full"
 )
 

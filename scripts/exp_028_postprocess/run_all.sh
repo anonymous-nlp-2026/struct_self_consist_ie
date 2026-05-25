@@ -2,8 +2,8 @@
 # Master script: merge -> inference -> analysis
 set -e
 
-source activate
-cd .
+source /root/miniconda3/bin/activate
+cd /root/autodl-tmp/struct_self_consist_ie
 
 echo "============================================"
 echo "  exp_028 Post-Processing Pipeline"

@@ -7,7 +7,7 @@ import numpy as np
 from collections import Counter
 from pathlib import Path
 
-BASE = Path(".")
+BASE = Path("/root/autodl-tmp/struct_self_consist_ie")
 
 CONFIGS = [
     {"name": "scierc_qwen_s42",  "path": "results/exp_freeform_ablation/samples.jsonl",

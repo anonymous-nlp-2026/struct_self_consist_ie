@@ -7,7 +7,7 @@ import json
 import numpy as np
 import os
 
-BASE = "."
+BASE = "/root/autodl-tmp/struct_self_consist_ie"
 OUT_DIR = os.path.join(BASE, "output/d141_degeneracy_scatter")
 os.makedirs(OUT_DIR, exist_ok=True)
 

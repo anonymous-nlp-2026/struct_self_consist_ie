@@ -11,12 +11,12 @@ import os
 import numpy as np
 from scipy.stats import spearmanr, pointbiserialr
 
-sys.path.insert(0, './code')
+sys.path.insert(0, '/root/autodl-tmp/struct_self_consist_ie/code')
 from evaluation import per_instance_f1
 
-DATA_PATH = "./output/exp_012_rerun_1024/samples_with_logprobs.jsonl"
-OUT_JSON = "./output/analysis_lp_range_cdf.json"
-OUT_FIG_DIR = "./output/figures"
+DATA_PATH = "/root/autodl-tmp/struct_self_consist_ie/output/exp_012_rerun_1024/samples_with_logprobs.jsonl"
+OUT_JSON = "/root/autodl-tmp/struct_self_consist_ie/output/analysis_lp_range_cdf.json"
+OUT_FIG_DIR = "/root/autodl-tmp/struct_self_consist_ie/output/figures"
 OUT_FIG = os.path.join(OUT_FIG_DIR, "lp_range_cdf.pdf")
 
 

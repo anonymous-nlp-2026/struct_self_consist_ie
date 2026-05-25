@@ -24,8 +24,8 @@ plt.rcParams.update({
     'text.usetex': False,
 })
 
-FIG_DIR = Path('./output/figures')
-PAPER_FIG = Path('./docs/paper/figures')
+FIG_DIR = Path('/root/autodl-tmp/struct_self_consist_ie/output/figures')
+PAPER_FIG = Path('/root/autodl-tmp/struct_self_consist_ie/docs/paper/figures')
 FIG_DIR.mkdir(parents=True, exist_ok=True)
 PAPER_FIG.mkdir(parents=True, exist_ok=True)
 

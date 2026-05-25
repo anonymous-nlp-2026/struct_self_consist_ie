@@ -8,14 +8,14 @@ from collections import Counter
 
 import numpy as np
 
-sys.path.insert(0, './code')
+sys.path.insert(0, '/root/autodl-tmp/struct_self_consist_ie/code')
 from consistency import (
     _ner_soft_jaccard_pair,
     _extract_surface_keys,
 )
 from evaluation import per_instance_f1
 
-DATA_PATH = "./output/exp_025_n32/samples.jsonl"
+DATA_PATH = "/root/autodl-tmp/struct_self_consist_ie/output/exp_025_n32/samples.jsonl"
 N_VALUES = [2, 4, 8, 16, 32]
 SUBTASK = "ner"
 ENTITY_KEY = "entities"
@@ -194,7 +194,7 @@ def main():
         results[f"N={N}"] = result
 
     # Save results
-    out_path = "./output/n_scaling_gf_maxlp.json"
+    out_path = "/root/autodl-tmp/struct_self_consist_ie/output/n_scaling_gf_maxlp.json"
     with open(out_path, "w") as f:
         json.dump(results, f, indent=2)
     print(f"\nResults saved to {out_path}")

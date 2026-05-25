@@ -23,7 +23,7 @@ plt.rcParams.update({
     'text.usetex': False,
 })
 
-OUT = Path('./output')
+OUT = Path('/root/autodl-tmp/struct_self_consist_ie/output')
 FIG_DIR = OUT / 'figures'
 FIG_DIR.mkdir(parents=True, exist_ok=True)
 

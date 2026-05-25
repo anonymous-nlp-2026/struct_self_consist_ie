@@ -3,7 +3,7 @@ import numpy as np
 sys.path.insert(0, os.path.join(os.path.dirname(__file__)))
 from unified_metrics import compute_entity_f1, compute_sample_f1s, compute_greedy_f1, load_and_filter
 
-os.chdir('.')
+os.chdir('/root/autodl-tmp/struct_self_consist_ie')
 
 results = []
 header = f"{'Experiment':<50} {'N':>5} {'Greedy(U)':>10} {'Oracle(U)':>10} {'Oracle(old)':>11} {'Delta':>8}"

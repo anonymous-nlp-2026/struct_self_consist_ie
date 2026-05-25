@@ -10,10 +10,10 @@ import numpy as np
 import os
 import sys
 
-sys.path.insert(0, './code')
+sys.path.insert(0, '/root/autodl-tmp/struct_self_consist_ie/code')
 from evaluation import entity_strict_match, _prf
 
-BASE = "."
+BASE = "/root/autodl-tmp/struct_self_consist_ie"
 OUT_DIR = os.path.join(BASE, "output/d141_conditional_decomp")
 os.makedirs(OUT_DIR, exist_ok=True)
 

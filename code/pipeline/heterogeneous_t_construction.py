@@ -14,7 +14,7 @@ import numpy as np
 from collections import defaultdict, Counter
 from sklearn.model_selection import KFold
 
-BASE = "."
+BASE = "/root/autodl-tmp/struct_self_consist_ie"
 
 T07_PATH = f"{BASE}/output/exp_lp_scierc_t07/samples.jsonl"
 T10_PATHS = {

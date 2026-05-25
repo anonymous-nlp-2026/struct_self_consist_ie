@@ -4,8 +4,8 @@
 # Output: output/exp_028_fewnerd_5epoch/samples.jsonl
 set -e
 
-source activate
-cd .
+source /root/miniconda3/bin/activate
+cd /root/autodl-tmp/struct_self_consist_ie
 
 export CUDA_VISIBLE_DEVICES=0
 

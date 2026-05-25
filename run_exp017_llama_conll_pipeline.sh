@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
-export PATH="$PATH"
-cd .
+export PATH="/root/miniconda3/bin:$PATH"
+cd /root/autodl-tmp/struct_self_consist_ie
 
 echo "$(date) === Step 1: Merge LoRA adapter ==="
 python3 -c "
@@ -9,7 +9,7 @@ from peft import PeftModel
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import torch, os
 
-base_path = './models/LLM-Research/Meta-Llama-3___1-8B-Instruct'
+base_path = '/root/autodl-tmp/.hf_cache/LLM-Research/Meta-Llama-3___1-8B-Instruct'
 adapter_path = 'checkpoints/llama3.1-8b-conll2003-lora-3ep'
 merged_path = 'checkpoints/llama3.1-8b-conll2003-merged'
 
@@ -54,7 +54,7 @@ import numpy as np
 from collections import Counter
 from scipy.stats import spearmanr, kendalltau, rankdata
 
-sys.path.insert(0, './code')
+sys.path.insert(0, '/root/autodl-tmp/struct_self_consist_ie/code')
 from consistency import compute_all_consistency_scores
 from evaluation import per_instance_f1
 

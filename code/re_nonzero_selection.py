@@ -18,7 +18,7 @@ from consistency import (
     _extract_surface_keys,
 )
 
-SAMPLES_PATH = "./output/exp_012_rerun_1024/samples.jsonl"
+SAMPLES_PATH = "/root/autodl-tmp/struct_self_consist_ie/output/exp_012_rerun_1024/samples.jsonl"
 SUBTASK = "re"
 N_BOOTSTRAP = 1000
 RNG_SEED = 42

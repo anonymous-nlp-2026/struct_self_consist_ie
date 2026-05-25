@@ -2,7 +2,7 @@ import json
 import sys
 from collections import Counter, defaultdict
 
-DATA = "./output/exp_020_pilot/samples.jsonl"
+DATA = "/root/autodl-tmp/struct_self_consist_ie/output/exp_020_pilot/samples.jsonl"
 
 def entity_set(ents):
     """Convert entity list to set of (text, type, start, end) tuples for matching."""

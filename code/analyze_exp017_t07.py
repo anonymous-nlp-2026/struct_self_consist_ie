@@ -10,11 +10,11 @@ from collections import Counter
 import numpy as np
 from scipy.stats import spearmanr, rankdata
 
-sys.path.insert(0, './code')
+sys.path.insert(0, '/root/autodl-tmp/struct_self_consist_ie/code')
 from consistency import compute_all_consistency_scores, _ner_soft_jaccard_pair, _extract_surface_keys
 from evaluation import per_instance_f1
 
-BASE = "."
+BASE = "/root/autodl-tmp/struct_self_consist_ie"
 T07_PATH = f"{BASE}/output/exp_017_llama_conll_n8_t07/samples.jsonl"
 T10_PATH = f"{BASE}/output/exp_017_llama_conll_infer/samples.jsonl"
 OUTPUT_DIR = f"{BASE}/output/analysis_round8"

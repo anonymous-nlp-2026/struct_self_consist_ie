@@ -5,12 +5,12 @@ import numpy as np
 from collections import Counter
 from scipy.stats import spearmanr
 
-sys.path.insert(0, './code')
+sys.path.insert(0, '/root/autodl-tmp/struct_self_consist_ie/code')
 from consistency import _ner_soft_jaccard_pair, _extract_surface_keys
 from evaluation import per_instance_f1
 
-DATA_PATH = "./output/exp_llama_fewnerd_n8_seed42/samples.jsonl"
-OUTPUT_DIR = "./output/exp_llama_fewnerd_n8_seed42"
+DATA_PATH = "/root/autodl-tmp/struct_self_consist_ie/output/exp_llama_fewnerd_n8_seed42/samples.jsonl"
+OUTPUT_DIR = "/root/autodl-tmp/struct_self_consist_ie/output/exp_llama_fewnerd_n8_seed42"
 SUBTASK = "ner"
 TAU = 0.05
 

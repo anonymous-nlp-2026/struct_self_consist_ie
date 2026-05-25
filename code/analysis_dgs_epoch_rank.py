@@ -4,7 +4,7 @@
 import json
 import sys
 import numpy as np
-sys.path.insert(0, "./code")
+sys.path.insert(0, "/root/autodl-tmp/struct_self_consist_ie/code")
 from unified_metrics import (
     compute_entity_f1, compute_degeneracy,
     bootstrap_ci, bootstrap_delta_ci
@@ -72,10 +72,10 @@ def analyze_dgs(path, name, n_samples=N_SAMPLES, gold_filter=True):
     }
 
 experiments = [
-    ('./output/exp_029a_scierc_3epoch/samples.jsonl', 'SciERC-3ep'),
-    ('./output/exp_012_rerun_1024/samples.jsonl', 'SciERC-5ep'),
-    ('./output/exp_029b_scierc_10epoch/samples.jsonl', 'SciERC-10ep'),
-    ('./output/exp_023_rank8_inference/samples.jsonl', 'SciERC-rank8'),
+    ('/root/autodl-tmp/struct_self_consist_ie/output/exp_029a_scierc_3epoch/samples.jsonl', 'SciERC-3ep'),
+    ('/root/autodl-tmp/struct_self_consist_ie/output/exp_012_rerun_1024/samples.jsonl', 'SciERC-5ep'),
+    ('/root/autodl-tmp/struct_self_consist_ie/output/exp_029b_scierc_10epoch/samples.jsonl', 'SciERC-10ep'),
+    ('/root/autodl-tmp/struct_self_consist_ie/output/exp_023_rank8_inference/samples.jsonl', 'SciERC-rank8'),
 ]
 
 results = {}
@@ -126,7 +126,7 @@ output = {
     'results': {name: r for name, r in results.items()},
 }
 
-out_path = './output/dgs_epoch_rank_analysis.json'
+out_path = '/root/autodl-tmp/struct_self_consist_ie/output/dgs_epoch_rank_analysis.json'
 with open(out_path, 'w') as f:
     json.dump(output, f, indent=2)
 print(f"\nSaved to {out_path}")

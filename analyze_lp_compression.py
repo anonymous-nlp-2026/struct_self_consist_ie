@@ -103,9 +103,9 @@ def analyze_dataset(filepath, dataset_name, max_instances=None):
 
 if __name__ == '__main__':
     datasets = [
-        ('./output/exp_023_rank8_inference/samples.jsonl', 'SciERC_rank8', None),
-        ('./output/exp_012_rerun_1024/samples.jsonl', 'SciERC_full_rank', None),
-        ('./output/exp_021_inference/samples.jsonl', 'FewNERD', 5000),
+        ('/root/autodl-tmp/struct_self_consist_ie/output/exp_023_rank8_inference/samples.jsonl', 'SciERC_rank8', None),
+        ('/root/autodl-tmp/struct_self_consist_ie/output/exp_012_rerun_1024/samples.jsonl', 'SciERC_full_rank', None),
+        ('/root/autodl-tmp/struct_self_consist_ie/output/exp_021_inference/samples.jsonl', 'FewNERD', 5000),
     ]
     
     results = []
@@ -123,7 +123,7 @@ if __name__ == '__main__':
         print(f"{r['dataset']:<20} | {r['degen_fraction']:>6.1%} | {r['median_lp_range']:>12.4f} | {r['tied_fraction']:>8.1%} | {rho_mean:>15} | {rho_med:>14} | {r['n_non_degen_with_rho']:>5}")
     
     # Save results
-    outdir = './output/r17_analyses'
+    outdir = '/root/autodl-tmp/struct_self_consist_ie/output/r17_analyses'
     os.makedirs(outdir, exist_ok=True)
     outpath = os.path.join(outdir, 'lp_compression_comparison.json')
     with open(outpath, 'w') as f:

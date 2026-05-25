@@ -3,7 +3,7 @@ import json, os, sys
 import numpy as np
 from collections import defaultdict
 
-BASE = "./output"
+BASE = "/root/autodl-tmp/struct_self_consist_ie/output"
 OUTPUT_DIR = f"{BASE}/b7_adaptive_budget"
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 

@@ -10,12 +10,12 @@ from collections import defaultdict
 # ---------------------------------------------------------------
 # Data paths
 # ---------------------------------------------------------------
-BASE = "./output"
+BASE = "/root/autodl-tmp/struct_self_consist_ie/output"
 DATASETS = {
     "fewnerd_qwen3_8b": f"{BASE}/exp_021_inference/samples.jsonl",
     "scierc_qwen3_8b": f"{BASE}/exp_029b_scierc_10epoch/samples.jsonl",
 }
-OUTPUT_DIR = "./output/b7_adaptive_budget"
+OUTPUT_DIR = "/root/autodl-tmp/struct_self_consist_ie/output/b7_adaptive_budget"
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 # ---------------------------------------------------------------

@@ -5,11 +5,11 @@ import numpy as np
 from collections import Counter
 from scipy.stats import spearmanr
 
-sys.path.insert(0, './code')
+sys.path.insert(0, '/root/autodl-tmp/struct_self_consist_ie/code')
 from consistency import fleiss_kappa_surface, structural_consistency_soft_jaccard
 from evaluation import per_instance_f1
 
-BASE = "./output"
+BASE = "/root/autodl-tmp/struct_self_consist_ie/output"
 
 MISSING_EXPS = {
     "qwen_scierc_n8_seed42": {

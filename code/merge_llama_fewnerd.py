@@ -8,9 +8,9 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 
 def main():
     p = argparse.ArgumentParser()
-    p.add_argument("--base_model", default="./models/LLM-Research/Meta-Llama-3___1-8B-Instruct")
-    p.add_argument("--adapter_path", default="./checkpoints/llama3.1-8b-fewnerd-lora")
-    p.add_argument("--output_path", default="./checkpoints/llama3.1-8b-fewnerd-merged")
+    p.add_argument("--base_model", default="/root/autodl-tmp/.hf_cache/LLM-Research/Meta-Llama-3___1-8B-Instruct")
+    p.add_argument("--adapter_path", default="/root/autodl-tmp/struct_self_consist_ie/checkpoints/llama3.1-8b-fewnerd-lora")
+    p.add_argument("--output_path", default="/root/autodl-tmp/struct_self_consist_ie/checkpoints/llama3.1-8b-fewnerd-merged")
     args = p.parse_args()
 
     if os.path.exists(os.path.join(args.output_path, "config.json")):

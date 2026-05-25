@@ -477,7 +477,7 @@ def per_instance_lp_selection_correctness(data, subtask="re"):
 # ============================================================
 
 def main():
-    os.chdir(".")
+    os.chdir("/root/autodl-tmp/struct_self_consist_ie")
     data_c = load_data(CONSTRAINED_PATH)
     data_f = load_data(FREEFORM_PATH)
     print(f"Loaded {len(data_c)} constrained, {len(data_f)} free-form instances")

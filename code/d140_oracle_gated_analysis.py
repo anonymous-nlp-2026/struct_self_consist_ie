@@ -12,10 +12,10 @@ import json
 import os
 import sys
 
-sys.path.insert(0, "./code")
+sys.path.insert(0, "/root/autodl-tmp/struct_self_consist_ie/code")
 from evaluation import entity_strict_match, _prf, per_instance_f1
 
-BASE = "."
+BASE = "/root/autodl-tmp/struct_self_consist_ie"
 
 DATASETS = {
     "Few-NERD": f"{BASE}/output/exp_021_inference/samples.jsonl",

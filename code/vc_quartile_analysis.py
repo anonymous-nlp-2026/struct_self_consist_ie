@@ -8,7 +8,7 @@ import numpy as np
 from collections import Counter
 from itertools import combinations
 
-sys.path.insert(0, './code')
+sys.path.insert(0, '/root/autodl-tmp/struct_self_consist_ie/code')
 from consistency import (
     _ner_soft_jaccard_pair,
     _re_soft_jaccard_pair,
@@ -16,7 +16,7 @@ from consistency import (
 )
 from evaluation import per_instance_f1
 
-BASE = "."
+BASE = "/root/autodl-tmp/struct_self_consist_ie"
 
 DATASETS = {
     "scierc_ner": {

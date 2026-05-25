@@ -44,7 +44,7 @@ def jaccard(set_a, set_b):
     return len(set_a & set_b) / len(set_a | set_b)
 
 # ── Load data ──
-BASE = "."
+BASE = "/root/autodl-tmp/struct_self_consist_ie"
 constrained_paths = {
     "seed42": f"{BASE}/output/exp_012_rerun_1024/samples_with_logprobs.jsonl",
     "seed123": f"{BASE}/output/exp_018_qwen_scierc_seed123/samples.jsonl",

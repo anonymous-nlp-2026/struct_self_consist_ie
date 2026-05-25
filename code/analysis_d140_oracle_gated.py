@@ -10,10 +10,10 @@ import sys
 import numpy as np
 from collections import defaultdict
 
-sys.path.insert(0, "./code")
+sys.path.insert(0, "/root/autodl-tmp/struct_self_consist_ie/code")
 from evaluation import entity_strict_match, _prf
 
-BASE = "."
+BASE = "/root/autodl-tmp/struct_self_consist_ie"
 
 DATASETS = {
     "SciERC": f"{BASE}/output/exp_012_rerun_1024/samples.jsonl",

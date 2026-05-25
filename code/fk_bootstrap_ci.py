@@ -6,11 +6,11 @@ import numpy as np
 from collections import Counter
 from scipy.stats import spearmanr
 
-sys.path.insert(0, './code')
+sys.path.insert(0, '/root/autodl-tmp/struct_self_consist_ie/code')
 from consistency import structural_consistency_soft_jaccard, fleiss_kappa_surface
 from evaluation import per_instance_f1
 
-BASE = "./output"
+BASE = "/root/autodl-tmp/struct_self_consist_ie/output"
 
 DATASETS = {
     "scierc_ner_seed42_n16": {

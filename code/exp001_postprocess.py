@@ -13,7 +13,7 @@ from collections import Counter
 import numpy as np
 from scipy.stats import spearmanr, kendalltau
 
-sys.path.insert(0, "./code")
+sys.path.insert(0, "/root/autodl-tmp/struct_self_consist_ie/code")
 
 from consistency import compute_all_consistency_scores
 from evaluation import per_instance_f1

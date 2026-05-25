@@ -3,7 +3,7 @@ import json
 import numpy as np
 from scipy.stats import spearmanr
 
-DATA = "./output/exp_017_llama_conll_infer/samples.jsonl"
+DATA = "/root/autodl-tmp/struct_self_consist_ie/output/exp_017_llama_conll_infer/samples.jsonl"
 
 def entity_set(entities):
     return {(e["text"], e["type"]) for e in entities}
@@ -88,7 +88,7 @@ result = {
 
 print(json.dumps(result, indent=2))
 
-out_path = "./output/exp_017_llama_conll_infer/within_lp_f1_rho.json"
+out_path = "/root/autodl-tmp/struct_self_consist_ie/output/exp_017_llama_conll_infer/within_lp_f1_rho.json"
 with open(out_path, "w") as f:
     json.dump(result, f, indent=2)
 print(f"\nSaved to {out_path}")

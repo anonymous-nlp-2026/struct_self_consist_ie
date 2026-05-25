@@ -8,12 +8,12 @@ from collections import Counter
 import numpy as np
 from scipy.stats import spearmanr, kendalltau, rankdata
 
-sys.path.insert(0, './code')
+sys.path.insert(0, '/root/autodl-tmp/struct_self_consist_ie/code')
 from consistency import compute_all_consistency_scores
 from evaluation import per_instance_f1
 
-DATA_PATH = "./output/exp_012_rerun_1024/samples.jsonl"
-OUTPUT_PATH = "./output/exp_012_rerun_1024/all_signals_5signal.json"
+DATA_PATH = "/root/autodl-tmp/struct_self_consist_ie/output/exp_012_rerun_1024/samples.jsonl"
+OUTPUT_PATH = "/root/autodl-tmp/struct_self_consist_ie/output/exp_012_rerun_1024/all_signals_5signal.json"
 SUBTASKS = ["ner", "re"]
 
 

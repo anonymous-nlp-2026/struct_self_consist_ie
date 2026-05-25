@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 from collections import defaultdict
 import os
 
-PROJ = "."
+PROJ = "/root/autodl-tmp/struct_self_consist_ie"
 SEED_FILES = {
     42: f"{PROJ}/output/exp_001_seed42_v2/samples.jsonl",
     123: f"{PROJ}/output/exp_001_seed123_v2/samples.jsonl",

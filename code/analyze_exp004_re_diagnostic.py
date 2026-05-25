@@ -19,7 +19,7 @@ from scipy.optimize import linear_sum_assignment
 from scipy.stats import spearmanr, norm
 
 # ── paths ──────────────────────────────────────────────────────────────
-BASE = Path(".")
+BASE = Path("/root/autodl-tmp/struct_self_consist_ie")
 PILOT_004 = BASE / "output" / "mvp_pilot_004" / "samples.jsonl"
 PILOT_005 = BASE / "output" / "mvp_pilot_005" / "samples.jsonl"
 OUT_DIR = BASE / "output" / "exp004_re_diagnostic"

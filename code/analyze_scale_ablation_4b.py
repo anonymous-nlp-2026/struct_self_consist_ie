@@ -5,18 +5,18 @@ import numpy as np
 from scipy.stats import spearmanr, rankdata
 from collections import Counter
 
-sys.path.insert(0, './code')
+sys.path.insert(0, '/root/autodl-tmp/struct_self_consist_ie/code')
 from consistency import compute_all_consistency_scores
 from evaluation import per_instance_f1
 
 EXPERIMENTS = {
     "qwen3_8b_conll": {
-        "path": "./output/exp002_conll2003/samples.jsonl",
+        "path": "/root/autodl-tmp/struct_self_consist_ie/output/exp002_conll2003/samples.jsonl",
         "subtask": "ner",
         "model": "Qwen3-8B",
     },
     "qwen3_4b_conll": {
-        "path": "./output/exp_scale_qwen3_4b_conll/samples.jsonl",
+        "path": "/root/autodl-tmp/struct_self_consist_ie/output/exp_scale_qwen3_4b_conll/samples.jsonl",
         "subtask": "ner",
         "model": "Qwen3-4B",
     },
@@ -206,7 +206,7 @@ for exp_id in ["qwen3_8b_conll", "qwen3_4b_conll"]:
     print(f"  {r['model']}: greedy_f1={r['greedy_f1']:.4f} oracle_f1={r['oracle_f1']:.4f} gap={r['oracle_f1']-r['greedy_f1']:+.4f}")
 
 # Save report
-out_path = "./output/exp_scale_qwen3_4b_conll/scale_ablation_report.json"
+out_path = "/root/autodl-tmp/struct_self_consist_ie/output/exp_scale_qwen3_4b_conll/scale_ablation_report.json"
 with open(out_path, "w") as f:
     json.dump(all_results, f, indent=2, default=lambda o: float(o) if isinstance(o, (np.floating,)) else str(o))
 print(f"\nReport saved to {out_path}")

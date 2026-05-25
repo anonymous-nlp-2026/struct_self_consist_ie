@@ -22,7 +22,7 @@ plt.rcParams.update({
     'text.usetex': False,
 })
 
-FIG_DIR = Path('./output/figures')
+FIG_DIR = Path('/root/autodl-tmp/struct_self_consist_ie/output/figures')
 FIG_DIR.mkdir(parents=True, exist_ok=True)
 
 # --- Director-confirmed NER N=8 delta (pp, vs greedy, 3-seed) ---

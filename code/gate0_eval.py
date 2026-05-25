@@ -1,6 +1,6 @@
 """Gate 0 quality check: greedy inference NER/RE F1 on SciERC test set."""
 import sys
-sys.path.insert(0, './code')
+sys.path.insert(0, '/root/autodl-tmp/struct_self_consist_ie/code')
 
 import json
 import os
@@ -8,8 +8,8 @@ from data_utils import load_uie_jsonl
 from sampling import build_uie_prompt, parse_extraction_output, SCIERC_SCHEMA_HINT
 from evaluation import compute_ner_f1, compute_re_f1
 
-MODEL_PATH = "./checkpoints/qwen3-8b-scierc-merged"
-TEST_DATA = "./data/test.jsonl"
+MODEL_PATH = "/root/autodl-tmp/struct_self_consist_ie/checkpoints/qwen3-8b-scierc-merged"
+TEST_DATA = "/root/autodl-tmp/struct_self_consist_ie/data/test.jsonl"
 
 instances = load_uie_jsonl(TEST_DATA)
 print(f"Loaded {len(instances)} test instances", flush=True)
@@ -102,7 +102,7 @@ ner_text_f1_pct = ner_text['f1'] * 100
 print(f"\nGate 0 (strict): NER F1 = {ner_f1_pct:.1f}% (threshold: 73%) -> {'PASS' if ner_f1_pct >= 73 else 'FAIL'}", flush=True)
 print(f"Gate 0 (text):   NER F1 = {ner_text_f1_pct:.1f}% (threshold: 73%) -> {'PASS' if ner_text_f1_pct >= 73 else 'FAIL'}", flush=True)
 
-os.makedirs("./output", exist_ok=True)
+os.makedirs("/root/autodl-tmp/struct_self_consist_ie/output", exist_ok=True)
 results = {
     "ner_strict": ner_metrics,
     "re_strict": re_metrics,
@@ -114,7 +114,7 @@ results = {
     "gate0_pass_text": ner_text_f1_pct >= 73,
     "num_instances": len(instances),
 }
-with open("./output/gate0_results.json", "w") as f:
+with open("/root/autodl-tmp/struct_self_consist_ie/output/gate0_results.json", "w") as f:
     json.dump(results, f, indent=2)
 
 # Save all predictions for further analysis
@@ -127,7 +127,7 @@ for i, (pred, inst, raw) in enumerate(zip(predictions, instances, raw_outputs)):
         "pred": pred,
         "raw_output": raw,
     })
-with open("./output/gate0_all_predictions.jsonl", "w") as f:
+with open("/root/autodl-tmp/struct_self_consist_ie/output/gate0_all_predictions.jsonl", "w") as f:
     for p in all_preds:
         f.write(json.dumps(p, ensure_ascii=False) + "\n")
 

@@ -4,7 +4,7 @@
 import json
 import os
 
-BASE = "."
+BASE = "/root/autodl-tmp/struct_self_consist_ie"
 OUT_DIR = f"{BASE}/output/exp_017_llama_conll"
 
 # Load existing data

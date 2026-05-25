@@ -1,8 +1,8 @@
 #!/bin/bash
 set -e
-cd .
+cd /root/autodl-tmp/struct_self_consist_ie
 
-# conda activate base
+eval "$(/root/miniconda3/bin/conda shell.bash hook)"
 conda activate base
 
 MODEL=checkpoints/llama3.1-8b-fewnerd-merged

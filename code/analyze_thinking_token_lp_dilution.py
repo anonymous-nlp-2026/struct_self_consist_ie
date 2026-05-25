@@ -14,7 +14,7 @@ import json
 import numpy as np
 from pathlib import Path
 
-BASE = Path(".")
+BASE = Path("/root/autodl-tmp/struct_self_consist_ie")
 OUT_DIR = BASE / "output" / "analysis_round8"
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 

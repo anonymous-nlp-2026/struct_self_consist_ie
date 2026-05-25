@@ -10,11 +10,11 @@ from collections import Counter
 import numpy as np
 from scipy.stats import spearmanr
 
-sys.path.insert(0, './code')
+sys.path.insert(0, '/root/autodl-tmp/struct_self_consist_ie/code')
 from consistency import _ner_soft_jaccard_pair, _extract_surface_keys
 from evaluation import per_instance_f1
 
-DATA_PATH = "./output/exp_017_llama_conll_infer/samples.jsonl"
+DATA_PATH = "/root/autodl-tmp/struct_self_consist_ie/output/exp_017_llama_conll_infer/samples.jsonl"
 SUBTASK = "ner"
 
 
@@ -202,7 +202,7 @@ def main():
     print(f"{'Degeneracy CF1 gold-filt':<30s}  {degeneracy_cf1:.4f}    0.4740")
 
     # Save
-    out_path = "./output/exp_017_llama_conll_infer/full_signal_analysis.json"
+    out_path = "/root/autodl-tmp/struct_self_consist_ie/output/exp_017_llama_conll_infer/full_signal_analysis.json"
     with open(out_path, "w") as f:
         json.dump(result, f, indent=2)
     print(f"\nSaved: {out_path}")

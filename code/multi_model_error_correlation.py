@@ -22,7 +22,7 @@ from pathlib import Path
 import numpy as np
 from scipy import stats
 
-BASE_DIR = Path(".")
+BASE_DIR = Path("/root/autodl-tmp/struct_self_consist_ie")
 
 DATA_CONFIGS = {
     "SciERC": {

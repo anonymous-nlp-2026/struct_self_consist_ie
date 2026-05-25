@@ -25,7 +25,7 @@ from evaluation import per_instance_f1
 
 # ── Configuration ──────────────────────────────────────────────────
 
-BASE = "."
+BASE = "/root/autodl-tmp/struct_self_consist_ie"
 
 DATASETS = {
     "scierc_ner": {

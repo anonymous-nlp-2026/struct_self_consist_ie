@@ -12,8 +12,8 @@ from scipy.stats import spearmanr
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from evaluation import per_instance_f1
 
-DATA_PATH = "./output/exp_012_rerun_1024/samples.jsonl"
-OUT_PATH = "./output/analysis_round8/fk_bootstrap_test.json"
+DATA_PATH = "/root/autodl-tmp/struct_self_consist_ie/output/exp_012_rerun_1024/samples.jsonl"
+OUT_PATH = "/root/autodl-tmp/struct_self_consist_ie/output/analysis_round8/fk_bootstrap_test.json"
 
 N_PERMUTATIONS = 10000
 N_SPLITS = 100

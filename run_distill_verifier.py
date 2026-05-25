@@ -25,8 +25,8 @@ from sklearn.neural_network import MLPClassifier
 from sklearn.metrics import roc_auc_score
 from sklearn.preprocessing import StandardScaler
 
-# ── Default data paths (on server) ──────────────────────────────────────
-BASE = Path(".")
+# ── Default data paths (on autodl-5090) ──────────────────────────────────────
+BASE = Path("/root/autodl-tmp/struct_self_consist_ie")
 DEFAULT_PATHS = {
     "scierc": BASE / "output" / "exp_026_t10_seed42" / "samples.jsonl",
     "conll":  BASE / "output" / "exp_002_conll_n16" / "samples.jsonl",

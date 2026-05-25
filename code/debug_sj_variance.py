@@ -9,11 +9,11 @@ import numpy as np
 from collections import Counter
 from scipy.stats import spearmanr, rankdata
 
-sys.path.insert(0, './code')
+sys.path.insert(0, '/root/autodl-tmp/struct_self_consist_ie/code')
 from consistency import _ner_soft_jaccard_pair, _extract_surface_keys
 from evaluation import per_instance_f1
 
-BASE = "./output"
+BASE = "/root/autodl-tmp/struct_self_consist_ie/output"
 SEEDS = {
     42:  f"{BASE}/exp_021_inference/samples.jsonl",
     123: f"{BASE}/exp_021_fewnerd_n8_seed123/samples.jsonl",

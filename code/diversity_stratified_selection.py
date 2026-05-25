@@ -275,8 +275,8 @@ def analyze_one_config(path, label):
 
 def main():
     configs = [
-        ("qwen_scierc_ner", "./output/exp_012_rerun_1024/samples.jsonl"),
-        ("llama_scierc_ner", "./output/exp007_llama_inference/samples.jsonl"),
+        ("qwen_scierc_ner", "/root/autodl-tmp/struct_self_consist_ie/output/exp_012_rerun_1024/samples.jsonl"),
+        ("llama_scierc_ner", "/root/autodl-tmp/struct_self_consist_ie/output/exp007_llama_inference/samples.jsonl"),
     ]
 
     output = {}
@@ -290,7 +290,7 @@ def main():
         "evidence for the correlation-selection gap."
     )
 
-    out_path = Path("./output/review_round2/diversity_stratified_selection.json")
+    out_path = Path("/root/autodl-tmp/struct_self_consist_ie/output/review_round2/diversity_stratified_selection.json")
     out_path.parent.mkdir(parents=True, exist_ok=True)
     with open(out_path, "w") as f:
         json.dump(output, f, indent=2)

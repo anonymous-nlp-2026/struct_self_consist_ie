@@ -14,7 +14,7 @@ import numpy as np
 from collections import Counter, defaultdict
 from scipy import stats as scipy_stats
 
-sys.path.insert(0, './code')
+sys.path.insert(0, '/root/autodl-tmp/struct_self_consist_ie/code')
 from consistency import _ner_soft_jaccard_pair, _extract_surface_keys
 from unified_metrics import compute_entity_f1, compute_degeneracy
 
@@ -119,7 +119,7 @@ def main():
     if args.output_dir is None:
         args.output_dir = args.input_dir
 
-    base = "."
+    base = "/root/autodl-tmp/struct_self_consist_ie"
     input_path = os.path.join(base, args.input_dir, "samples.jsonl")
     output_path = os.path.join(base, args.output_dir, "results.json")
     os.makedirs(os.path.join(base, args.output_dir), exist_ok=True)

@@ -5,34 +5,34 @@ import numpy as np
 from scipy import stats
 from collections import Counter
 
-sys.path.insert(0, './code/')
+sys.path.insert(0, '/root/autodl-tmp/struct_self_consist_ie/code/')
 from consistency import _ner_soft_jaccard_pair, _re_soft_jaccard_pair
 from evaluation import per_instance_f1
 
 CONFIGS = {
     "qwen_scierc_ner": {
-        "path": "./output/exp_012_rerun_1024/samples.jsonl",
+        "path": "/root/autodl-tmp/struct_self_consist_ie/output/exp_012_rerun_1024/samples.jsonl",
         "subtask": "ner",
     },
     "qwen_scierc_re": {
-        "path": "./output/exp_012_rerun_1024/samples.jsonl",
+        "path": "/root/autodl-tmp/struct_self_consist_ie/output/exp_012_rerun_1024/samples.jsonl",
         "subtask": "re",
     },
     "llama_scierc_ner": {
-        "path": "./output/exp007_llama_inference/samples.jsonl",
+        "path": "/root/autodl-tmp/struct_self_consist_ie/output/exp007_llama_inference/samples.jsonl",
         "subtask": "ner",
     },
     "qwen_conll_ner": {
-        "path": "./output/exp002_conll2003/samples.jsonl",
+        "path": "/root/autodl-tmp/struct_self_consist_ie/output/exp002_conll2003/samples.jsonl",
         "subtask": "ner",
     },
     "llama_conll_ner": {
-        "path": "./output/exp_017_llama_conll_infer/samples.jsonl",
+        "path": "/root/autodl-tmp/struct_self_consist_ie/output/exp_017_llama_conll_infer/samples.jsonl",
         "subtask": "ner",
     },
 }
 
-OUTPUT_PATH = "./output/review_round2/oracle_improvable_tost.json"
+OUTPUT_PATH = "/root/autodl-tmp/struct_self_consist_ie/output/review_round2/oracle_improvable_tost.json"
 
 def load_instances(path):
     with open(path) as f:

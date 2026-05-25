@@ -6,7 +6,7 @@ import json
 import numpy as np
 from scipy.stats import spearmanr
 
-BASE = "."
+BASE = "/root/autodl-tmp/struct_self_consist_ie"
 N = 8
 
 TEMP_CONFIGS = {

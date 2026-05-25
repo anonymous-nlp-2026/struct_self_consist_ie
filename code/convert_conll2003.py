@@ -133,12 +133,12 @@ def main():
     from datasets import load_dataset
 
     print("Loading CoNLL-2003 dataset...")
-    ds = load_dataset("BramVanroy/conll2003", cache_dir="./models")
+    ds = load_dataset("BramVanroy/conll2003", cache_dir="/root/autodl-tmp/.hf_cache")
 
     tag_names = ds["train"].features["ner_tags"].feature.names
     print(f"Tag names: {tag_names}")
 
-    data_dir = "./data/conll2003"
+    data_dir = "/root/autodl-tmp/struct_self_consist_ie/data/conll2003"
     split_map = {"train": "train", "validation": "dev", "test": "test"}
 
     all_stats = {}

@@ -18,11 +18,11 @@ import numpy as np
 from collections import Counter
 from scipy.stats import spearmanr
 
-sys.path.insert(0, './code')
+sys.path.insert(0, '/root/autodl-tmp/struct_self_consist_ie/code')
 from consistency import structural_consistency_soft_jaccard, fleiss_kappa_surface, _extract_surface_keys, _ner_soft_jaccard_pair
 from evaluation import per_instance_f1
 
-BASE = "."
+BASE = "/root/autodl-tmp/struct_self_consist_ie"
 INPUT_PATH = f"{BASE}/output/exp_029a_scierc_3epoch/samples.jsonl"
 OUTPUT_DIR = f"{BASE}/output/exp_029a_scierc_3epoch"
 SUBTASK = "ner"

@@ -123,7 +123,7 @@ def run_one(path, max_n=8):
     }
 
 if __name__ == "__main__":
-    base = "./output"
+    base = "/root/autodl-tmp/struct_self_consist_ie/output"
 
     jobs = []
     for arg in sys.argv[1:]:

@@ -123,9 +123,9 @@ def print_results(r):
 
 
 datasets = [
-    ('./output/exp_012_rerun_1024/samples.jsonl', 'SciERC', 8),
-    ('./output/exp_002_conll_n16_r1024/samples.jsonl', 'CoNLL', 8),
-    ('./output/exp_027_fewnerd_n16/samples.jsonl', 'FewNERD', 8),
+    ('/root/autodl-tmp/struct_self_consist_ie/output/exp_012_rerun_1024/samples.jsonl', 'SciERC', 8),
+    ('/root/autodl-tmp/struct_self_consist_ie/output/exp_002_conll_n16_r1024/samples.jsonl', 'CoNLL', 8),
+    ('/root/autodl-tmp/struct_self_consist_ie/output/exp_027_fewnerd_n16/samples.jsonl', 'FewNERD', 8),
 ]
 
 all_results = []
@@ -227,8 +227,8 @@ for r in all_results:
         'gated_minus_lp_pp': round(entry['delta_gated_minus_lp']['delta'] * 100, 2),
     })
 
-os.makedirs('./output', exist_ok=True)
-out_path = './output/dgs_selection_results.json'
+os.makedirs('/root/autodl-tmp/struct_self_consist_ie/output', exist_ok=True)
+out_path = '/root/autodl-tmp/struct_self_consist_ie/output/dgs_selection_results.json'
 with open(out_path, 'w') as f:
     json.dump(json_output, f, indent=2)
 print(f"\n=== JSON saved to {out_path} ===")

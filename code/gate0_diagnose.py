@@ -1,6 +1,6 @@
 """Diagnose Gate 0 results: compute text-level match F1 alongside strict match."""
 import sys
-sys.path.insert(0, './code')
+sys.path.insert(0, '/root/autodl-tmp/struct_self_consist_ie/code')
 
 import json
 from data_utils import load_uie_jsonl
@@ -17,7 +17,7 @@ from evaluation import compute_ner_f1, compute_re_f1
 # Instead, let's compute text-level match on the existing predictions.
 
 # Load test data
-instances = load_uie_jsonl('./data/test.jsonl')
+instances = load_uie_jsonl('/root/autodl-tmp/struct_self_consist_ie/data/test.jsonl')
 
 # Load the raw vLLM output texts we need to save them
 # Since we don't have them, let's compute text-based match from
@@ -38,7 +38,7 @@ instances = load_uie_jsonl('./data/test.jsonl')
 
 # Compute how many entities have text match vs offset match
 # from the 5 saved samples
-with open('./output/gate0_samples.json') as f:
+with open('/root/autodl-tmp/struct_self_consist_ie/output/gate0_samples.json') as f:
     samples = json.load(f)
 
 # Count text-match vs strict-match across samples

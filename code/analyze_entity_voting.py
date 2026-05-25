@@ -15,11 +15,11 @@ from collections import Counter
 import numpy as np
 from scipy.stats import spearmanr, kendalltau
 
-sys.path.insert(0, './code')
+sys.path.insert(0, '/root/autodl-tmp/struct_self_consist_ie/code')
 from consistency import compute_all_consistency_scores
 from evaluation import per_instance_f1, entity_strict_match, relation_strict_match
 
-DATA_PATH = "./output/mvp_pilot_004/samples.jsonl"
+DATA_PATH = "/root/autodl-tmp/struct_self_consist_ie/output/mvp_pilot_004/samples.jsonl"
 
 
 def load_data(path):
@@ -279,7 +279,7 @@ def main():
         print_results(subtask, analysis)
         report[subtask] = {k: v for k, v in analysis.items() if k not in ("voting_f1_all", "greedy_f1_all")}
 
-    out_path = "./output/mvp_pilot_004/exp014_entity_voting_report.json"
+    out_path = "/root/autodl-tmp/struct_self_consist_ie/output/mvp_pilot_004/exp014_entity_voting_report.json"
     with open(out_path, "w") as f:
         json.dump(report, f, indent=2)
     print(f"\nReport saved to {out_path}")

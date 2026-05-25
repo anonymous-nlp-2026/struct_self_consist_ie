@@ -240,6 +240,6 @@ def analyze(data_path, output_dir):
 
 if __name__ == "__main__":
     results = analyze(
-        data_path="./output/exp_entity_token_lp/scierc/samples.jsonl",
-        output_dir="./output/exp_028_entity_token_lp",
+        data_path="/root/autodl-tmp/struct_self_consist_ie/output/exp_entity_token_lp/scierc/samples.jsonl",
+        output_dir="/root/autodl-tmp/struct_self_consist_ie/output/exp_028_entity_token_lp",
     )

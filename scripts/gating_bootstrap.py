@@ -5,8 +5,8 @@ from pathlib import Path
 import warnings
 warnings.filterwarnings("ignore")
 
-DATA_DIR = Path("./output/dev_set_lp_probe")
-OUT_DIR = Path("./output/gating_bootstrap")
+DATA_DIR = Path("/root/autodl-tmp/struct_self_consist_ie/output/dev_set_lp_probe")
+OUT_DIR = Path("/root/autodl-tmp/struct_self_consist_ie/output/gating_bootstrap")
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 
 DATASETS = ["scierc", "conll2003", "fewnerd"]

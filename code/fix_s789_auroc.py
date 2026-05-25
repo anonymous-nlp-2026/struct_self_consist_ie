@@ -2,7 +2,7 @@
 """Fix AUROC + SJ selection in analyze_fewnerd_s789.py, then rerun analysis."""
 import re
 
-SCRIPT = "./code/analyze_fewnerd_s789.py"
+SCRIPT = "/root/autodl-tmp/struct_self_consist_ie/code/analyze_fewnerd_s789.py"
 
 with open(SCRIPT) as f:
     code = f.read()

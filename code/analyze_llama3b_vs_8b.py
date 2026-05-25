@@ -5,18 +5,18 @@ import numpy as np
 from scipy.stats import spearmanr, rankdata
 from collections import Counter
 
-sys.path.insert(0, './code')
+sys.path.insert(0, '/root/autodl-tmp/struct_self_consist_ie/code')
 from consistency import compute_all_consistency_scores
 from evaluation import per_instance_f1
 
 EXPERIMENTS = {
     "llama_8b_scierc": {
-        "path": "./output/exp_018_llama_scierc_seed42_r1024/samples.jsonl",
+        "path": "/root/autodl-tmp/struct_self_consist_ie/output/exp_018_llama_scierc_seed42_r1024/samples.jsonl",
         "subtask": "ner",
         "model": "LLaMA-3.1-8B",
     },
     "llama_3b_scierc": {
-        "path": "./output/review_round9_experiments/llama3b_scierc/samples.jsonl",
+        "path": "/root/autodl-tmp/struct_self_consist_ie/output/review_round9_experiments/llama3b_scierc/samples.jsonl",
         "subtask": "ner",
         "model": "LLaMA-3.2-3B",
     },
@@ -158,7 +158,7 @@ if __name__ == "__main__":
         fk_rho = r["full"]["FK"]["rho"]
         print(f"  {r['model']}: SJ={sj_rho:.4f} FK={fk_rho:.4f} SJ>FK={sj_rho > fk_rho} (delta={sj_rho-fk_rho:+.4f})")
 
-    out_dir = "./output/review_round9_experiments/llama3b_scierc"
+    out_dir = "/root/autodl-tmp/struct_self_consist_ie/output/review_round9_experiments/llama3b_scierc"
     os.makedirs(out_dir, exist_ok=True)
     out_path = os.path.join(out_dir, "comparison_vs_8b.json")
     with open(out_path, "w") as f:

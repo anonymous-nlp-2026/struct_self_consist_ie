@@ -13,8 +13,8 @@ import sys
 from collections import Counter
 
 
-DATA_DIR = "./data/fewnerd"
-HF_CACHE = "./models"
+DATA_DIR = "/root/autodl-tmp/struct_self_consist_ie/data/fewnerd"
+HF_CACHE = "/root/autodl-tmp/.hf_cache"
 
 SCHEMA_HINT = (
     "Entity types: person, organization, location, building, art, product, event, other"

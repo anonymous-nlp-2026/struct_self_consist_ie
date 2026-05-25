@@ -8,11 +8,11 @@ from itertools import combinations
 import numpy as np
 from scipy.optimize import linear_sum_assignment
 
-sys.path.insert(0, './code')
+sys.path.insert(0, '/root/autodl-tmp/struct_self_consist_ie/code')
 from evaluation import per_instance_f1
 
-DATA_PATH = "./output/exp_012_rerun_1024/samples_with_logprobs.jsonl"
-OUTPUT_PATH = "./output/exp_012_rerun_1024/reliability_data_1024.json"
+DATA_PATH = "/root/autodl-tmp/struct_self_consist_ie/output/exp_012_rerun_1024/samples_with_logprobs.jsonl"
+OUTPUT_PATH = "/root/autodl-tmp/struct_self_consist_ie/output/exp_012_rerun_1024/reliability_data_1024.json"
 
 
 def _span_soft_jaccard(s1_start, s1_end, s2_start, s2_end):

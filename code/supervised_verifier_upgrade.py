@@ -25,15 +25,15 @@ SEED = 42
 
 DATASETS = {
     "scierc": {
-        "path": "./output/exp_001_seed42_v2/samples.jsonl",
+        "path": "/root/autodl-tmp/struct_self_consist_ie/output/exp_001_seed42_v2/samples.jsonl",
         "subtask": "ner", "subsample_n": 8, "max_instances": None,
     },
     "conll": {
-        "path": "./output/exp002_conll2003/samples.jsonl",
+        "path": "/root/autodl-tmp/struct_self_consist_ie/output/exp002_conll2003/samples.jsonl",
         "subtask": "ner", "subsample_n": None, "max_instances": None,
     },
     "fewnerd": {
-        "path": "./output/exp_021_inference/samples.jsonl",
+        "path": "/root/autodl-tmp/struct_self_consist_ie/output/exp_021_inference/samples.jsonl",
         "subtask": "ner", "subsample_n": None, "max_instances": 5000,
     },
 }
@@ -324,7 +324,7 @@ def main():
         if result:
             all_results[ds_name] = result
 
-    out_dir = "./output/supervised_verifier_upgrade"
+    out_dir = "/root/autodl-tmp/struct_self_consist_ie/output/supervised_verifier_upgrade"
     os.makedirs(out_dir, exist_ok=True)
     with open(os.path.join(out_dir, "results.json"), "w") as f:
         json.dump(all_results, f, indent=2)

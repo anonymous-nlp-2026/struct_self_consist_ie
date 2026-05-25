@@ -19,8 +19,8 @@ from consistency import (
     _extract_surface_keys,
 )
 
-SAMPLES_PATH = "./output/exp_012_rerun_1024/samples.jsonl"
-OUTPUT_DIR = "./output/review_round2"
+SAMPLES_PATH = "/root/autodl-tmp/struct_self_consist_ie/output/exp_012_rerun_1024/samples.jsonl"
+OUTPUT_DIR = "/root/autodl-tmp/struct_self_consist_ie/output/review_round2"
 OUTPUT_PATH = os.path.join(OUTPUT_DIR, "re_conditional_analysis.json")
 SUBTASK = "re"
 
